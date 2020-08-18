@@ -3,16 +3,24 @@
     position: relative;
     margin: 2rem 0;
     background: #6301e4;
-    width: 50vw;
+    width: 60vw;
     height: 93px;
   }
 
   .main-grid-container__course__headline__box {
     position: absolute;
     width: 20vw;
-    height: 55px;
+    height: 11vh;
     background: #141c3a;
     color: #ffffff;
-    bottom: 40%;
+    bottom: 32%;
+    right: 69%;
+    padding: 1rem 2rem;
+  }
+
+  .main-grid-container__course__headline > img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }

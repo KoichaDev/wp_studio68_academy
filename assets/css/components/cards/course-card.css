@@ -1,0 +1,31 @@
+.container__courses__card {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 1px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.container__courses__card > img {
+  width: 100%;
+  height: auto;
+}
+
+.container__courses__card__card-title {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.container__courses__card__card-text {
+  text-align: center;
+  line-height: 1rem;
+}
+
+.container__courses__card__card-btn {
+  background: #141c3a;
+  background-size: 100%;
+  color: #ffffff;
+  margin: 2.5rem;
+  padding: 8px;
+  line-height: 7rem;
+  text-decoration: none;
+}

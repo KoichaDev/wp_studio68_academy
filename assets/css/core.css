@@ -21,6 +21,7 @@
  * Components are re-usable across the project
  * Components are independent
  */
+@import './components/cards/course-card.css';
 @import './components/headline/courses/courses.css';
 @import './components/headline/news/news.css';
 @import './components/navbar/nav.css';

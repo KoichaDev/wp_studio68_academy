@@ -21,6 +21,10 @@
 
 .main-grid-container__courses {
   grid-area: main-grid-container__courses;
+  display: grid;
+  width: 87%;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .main-grid-container__news_headliner {
