@@ -1,3 +1,3 @@
-<section class="user-courses">
-
+<section class="main-grid-container__news">
+    Blog News
 </section>

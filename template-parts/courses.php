@@ -1,3 +1,3 @@
-  <section class="main-grid-main-grid-container__main">
-      main
-  </section>
+<section class="main-grid-container__courses">
+      Courses
+</section>
