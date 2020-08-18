@@ -12,6 +12,10 @@
     text-decoration: none;
   }
 
+  .fas .fa-bars {
+    display: block;
+  }
+
   .header__title {
     color: #ffc740;
   }

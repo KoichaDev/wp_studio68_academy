@@ -21,6 +21,7 @@
   }
 
   .header__overlay {
+    display: none;
     position: absolute;
     background: #47cca0;
     top: 0;
