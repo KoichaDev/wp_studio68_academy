@@ -4,7 +4,7 @@
  * Helper functions and non–output snippets only (font-face imports, reusable mixins, global variables, colors, etc.)
  * Variables for the components 
  */
-@import './abstract/animation-variables.css';
+@import './abstract/media-query.css';
 
 /* BASE
  * Global styles are imported here
@@ -21,11 +21,9 @@
  * Components are re-usable across the project
  * Components are independent
  */
-@import './components/nav.css';
+@import './components/navbar/nav.css';
 
 /* LAYOUTS 
  * Unique combinations of components and base styles are imported here
  * Each stylesheet contains all component style overrides, and specific layout only attributes
  */
-
-@import './layouts/aside.css';
