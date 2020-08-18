@@ -4,12 +4,13 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
-    <title></title>
-
+    <title><?php echo get_bloginfo('name'); ?></title>
+    
 </head>
     <body>
-    <nav class="overlay-nav">
-        <div class="overlay-nav__bg">
-        </div>
-    </nav>
-    
+    <header>
+        <nav class="overlay-nav">
+            <div class="overlay-nav__bg">
+            </div>
+        </nav>
+    </header>

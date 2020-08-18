@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* ABSTRACT 
+ * Helper functions and non–output snippets only (font-face imports, reusable mixins, global variables, colors, etc.)
+ * Variables for the components 
+ */
+@import './abstract/animation-variables.css';
+
+/* BASE
+ * Global styles are imported here
+ * A custom reset file can be added to override normalize
+ * Typography (h1-6, p, a, blockquote, etc.) should be included
+ * Globally defined tags (body, main, article, div, etc.) should also be included
+ */
+@import './base/animation.css';
+
+/*
+ * COMPONENTS 
+ * Micro level reusable components are imported here
+ * Each component does one thing and one thing only
+ * Components are re-usable across the project
+ * Components are independent
+ */
+@import './components/nav.css';
+
+/* LAYOUTS 
+ * Unique combinations of components and base styles are imported here
+ * Each stylesheet contains all component style overrides, and specific layout only attributes
+ */
+
+@import './layouts/aside.css';
