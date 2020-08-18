@@ -12,7 +12,7 @@
  * Typography (h1-6, p, a, blockquote, etc.) should be included
  * Globally defined tags (body, main, article, div, etc.) should also be included
  */
-@import './base/animation.css';
+@import './base/reset.css';
 
 /*
  * COMPONENTS 

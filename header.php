@@ -8,9 +8,34 @@
     
 </head>
     <body>
-    <header>
-        <nav class="overlay-nav">
-            <div class="overlay-nav__bg">
-            </div>
-        </nav>
+    <header class="header">
+        <a href="<?php echo get_site_url('/') ?>" class="header__logo">
+        <span class="header__title">Studio | 68</span>
+        <br>
+        <span class="header__subtitle">Academy</span>   
+    </a>
+    <div class="header__overlay">
+        <ul>
+            <li>
+                <img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=935&q=80" alt="">
+            </li>
+            <li>
+               <p><?php echo ucfirst(wp_get_current_user() -> roles[0]); ?></p>
+               <p>
+                   <?php 
+                    $user_id = wp_get_current_user() -> ID;
+                    $first_name = get_userdata($user_id) -> first_name;
+                    $last_name =  get_userdata($user_id) -> last_name;
+
+                    echo ucfirst($first_name) . " " . ucfirst($last_name);
+                   ?>
+                </p>
+            </li>
+            <li>
+                 <p data-current-date>17.07.2020</p>
+                <p data-time-zone>04:35 PM</p>
+            </li>
+        </ul>
+    </div>
+   
     </header>
