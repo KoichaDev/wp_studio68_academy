@@ -4,6 +4,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
+    <script src="https://kit.fontawesome.com/b3ce871dc0.js" crossorigin="anonymous"></script>
     <title><?php echo get_bloginfo('name'); ?></title>
     
 </head>
@@ -14,6 +15,7 @@
         <br>
         <span class="header__subtitle">Academy</span>   
     </a>
+    <i class="fas fa-bars" style="display: none;"></i>
     <div class="header__overlay">
         <ul>
             <li>
