@@ -21,9 +21,13 @@
  * Components are re-usable across the project
  * Components are independent
  */
+@import './components/headline/courses/courses.css';
+@import './components/headline/news/news.css';
 @import './components/navbar/nav.css';
 
 /* LAYOUTS 
  * Unique combinations of components and base styles are imported here
  * Each stylesheet contains all component style overrides, and specific layout only attributes
  */
+
+@import './layouts/homepage.css';
