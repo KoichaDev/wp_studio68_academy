@@ -4,7 +4,7 @@
  * Helper functions and non–output snippets only (font-face imports, reusable mixins, global variables, colors, etc.)
  * Variables for the components 
  */
-@import './abstract/media-query.css';
+/* @import './abstract/media-query.css'; */
 
 /* BASE
  * Global styles are imported here
