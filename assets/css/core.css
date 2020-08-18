@@ -13,6 +13,7 @@
  * Globally defined tags (body, main, article, div, etc.) should also be included
  */
 @import './base/reset.css';
+@import './base/typography.css';
 
 /*
  * COMPONENTS 

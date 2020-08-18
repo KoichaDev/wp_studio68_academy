@@ -23,4 +23,8 @@
     right: 0;
     bottom: 0;
   }
+
+  .main-grid-container__news_headliner__box > h1 {
+    font-weight: 800;
+  }
 }
