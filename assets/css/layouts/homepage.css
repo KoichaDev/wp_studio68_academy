@@ -33,4 +33,32 @@
 
 .main-grid-container__news {
   grid-area: main-grid-container__news;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    'main-grid-container__news__top-article main-grid-container__news__top-article'
+    'main-grid-container__news__middle-left-article main-grid-container__news__middle-right-article'
+    'main-grid-container__news__bottom-left-article main-grid-container__news__bottom-right-article';
+}
+
+.main-grid-container__news__top-article {
+  grid-area: main-grid-container__news__top-article;
+}
+
+.main-grid-container__news__middle-left-article {
+  grid-area: main-grid-container__news__middle-left-article;
+}
+
+.main-grid-container__news__middle-right-article {
+  grid-area: main-grid-container__news__middle-right-article;
+}
+
+.main-grid-container__news__bottom-left-article {
+  grid-area: main-grid-container__news__bottom-left-article;
+}
+
+.main-grid-container__news__bottom-right-article {
+  grid-area: main-grid-container__news__bottom-right-article;
 }
