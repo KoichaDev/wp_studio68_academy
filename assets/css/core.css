@@ -23,6 +23,7 @@
  * Components are independent
  */
 @import './components/cards/course-card.css';
+@import './components/cards/news-card.css';
 @import './components/headline/courses/courses.css';
 @import './components/headline/news/news.css';
 @import './components/navbar/nav.css';
@@ -33,3 +34,4 @@
  */
 
 @import './layouts/homepage.css';
+@import './layouts/news-section.css';
