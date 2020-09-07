@@ -37,24 +37,5 @@
   width: 87%;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.main-grid-container__news__top-article {
-  grid-area: main-grid-container__news__top-article;
-}
-
-.main-grid-container__news__middle-left-article {
-  grid-area: main-grid-container__news__middle-left-article;
-}
-
-.main-grid-container__news__middle-right-article {
-  grid-area: main-grid-container__news__middle-right-article;
-}
-
-.main-grid-container__news__bottom-left-article {
-  grid-area: main-grid-container__news__bottom-left-article;
-}
-
-.main-grid-container__news__bottom-right-article {
-  grid-area: main-grid-container__news__bottom-right-article;
+  padding-bottom: 2rem;
 }
