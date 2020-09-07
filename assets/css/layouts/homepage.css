@@ -12,11 +12,9 @@
 }
 
 .main-grid-container__aside {
-  grid-area: main-grid-container__aside;
-}
-
-.main-grid-container__course__headline {
-  grid-area: main-grid-container__course__headline;
+  display: grid;
+  flex-direction: column;
+  margin: 8rem 5rem;
 }
 
 .main-grid-container__courses {
@@ -27,10 +25,6 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.main-grid-container__news_headliner {
-  grid-area: main-grid-container__news_headliner;
-}
-
 .main-grid-container__news {
   grid-area: main-grid-container__news;
   display: grid;
@@ -38,4 +32,16 @@
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   padding-bottom: 2rem;
+}
+
+.main-grid-container__aside {
+  grid-area: main-grid-container__aside;
+}
+
+.main-grid-container__course__headline {
+  grid-area: main-grid-container__course__headline;
+}
+
+.main-grid-container__news_headliner {
+  grid-area: main-grid-container__news_headliner;
 }

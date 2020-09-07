@@ -1,0 +1,15 @@
+.aside-homepage-sticky {
+  position: sticky;
+  left: 0;
+}
+
+.aside-homepage-sticky > ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0.5rem 0;
+}
+
+.aside-homepage-sticky > ul > li {
+  padding: 0.5rem 1rem;
+}
