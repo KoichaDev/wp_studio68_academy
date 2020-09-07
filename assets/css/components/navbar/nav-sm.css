@@ -3,9 +3,8 @@
     position: relative;
     display: flex;
     background: #6301e4;
-    width: 100vw;
-    height: 15vh;
-    border-bottom: 5px solid #47cca0;
+    width: 100%;
+    height: 15%;
   }
 
   .header__logo {
@@ -26,7 +25,7 @@
     position: absolute;
     background: #47cca0;
     top: 0;
-    left: 75%;
+    left: 70%;
     right: 0;
     bottom: 0;
   }
@@ -40,7 +39,7 @@
     position: relative;
     right: 50%;
     width: 75px;
-    bottom: 27%;
+    bottom: 20%;
     min-height: 76px;
     border: 2px solid #cc4773;
     border-radius: 50%;
