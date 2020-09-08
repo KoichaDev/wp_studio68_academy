@@ -1,5 +1,6 @@
 <?php 
-    function s68_enqueue_scripts() {
+    // This is for front-end use. Basically everything related to what the user sees on the webpage
+    function s68_front_enqueue_scripts() {
         
         $uri = get_theme_file_uri();
         $check_version = S68_DEV_MODE ? time() : false;
