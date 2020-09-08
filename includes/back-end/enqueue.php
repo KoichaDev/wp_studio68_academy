@@ -11,6 +11,7 @@
         // Post type for Courses
         register_post_type('courses', [
             'public' => true,
+            'has_archieve' => true,
             'supports' => ['title', 'editor', 'thumbnail'],
             'show_in_rest' => true, // This assoc. array will go from default tinyMCE to Gutenberg Editor
             'labels' => [ // This is admin dashboard events for plugins
