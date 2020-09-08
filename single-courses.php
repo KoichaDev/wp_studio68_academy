@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <main class="grid-course-container">
-  <div class="grid-course-container__course-headline">
-      headline
-  </div>
+    <?php 
+        get_template_part('template-parts/courses page/courses_headliner', '/');
+    ?>
   <div class="grid-course-container__main">
       main
   </div>
