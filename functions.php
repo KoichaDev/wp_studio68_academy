@@ -7,7 +7,7 @@ include(get_theme_file_path('/includes/back-end/enqueue.php'));
 include(get_theme_file_path('/includes/front-end/enqueue.php'));
 
 // Action Hooks - Will be used for any filters and action hooks
-add_action('wp_enqueue_scripts', 's68_back_enqueue_scripts');
+add_action('after_setup_theme', 's68_back_enqueue_scripts');
 add_action('wp_enqueue_scripts', 's68_front_enqueue_scripts');
 
 ?>
