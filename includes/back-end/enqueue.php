@@ -6,4 +6,20 @@
         add_theme_support('post-thumbnails');
      
     }
+
+    function s68_academy_course_post_types() {
+        // Post type for Courses
+        register_post_type('courses', [
+            'public' => true,
+            'supports' => ['title', 'editor', 'thumbnail'],
+            'show_in_rest' => true, // This assoc. array will go from default tinyMCE to Gutenberg Editor
+            'labels' => [ // This is admin dashboard events for plugins
+                'name' => 'Academy Courses',
+                'edit_item' => 'Edit Course',
+                'all_items' => 'All Courses',
+                'singular_name' => 'Studio68 Academy Courses' 
+            ],
+            'menu_icon' => 'dashicons-welcome-learn-more'
+        ]);
+    }
 ?>
