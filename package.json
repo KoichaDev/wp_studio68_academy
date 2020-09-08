@@ -1,0 +1,25 @@
+{
+  "name": "wp_studio68_academy",
+  "version": "1.0.0",
+  "description": "This is a LMS Theme for Studio68",
+  "main": "index.js",
+  "dependencies": {
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "parcel watch assets/js/*.js",
+    "build": "parcel build assets/js/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoichaDev/wp_studio68_academy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoichaDev/wp_studio68_academy/issues"
+  },
+  "homepage": "https://github.com/KoichaDev/wp_studio68_academy#readme"
+}
