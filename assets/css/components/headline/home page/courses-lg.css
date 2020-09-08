@@ -1,7 +1,4 @@
 @media (min-width: 1270px) {
-  /********************************************
-   *** Courses Section Headline for Homepage***
-   ********************************************/
   .main-grid-container__course__headline {
     position: relative;
     margin: 2rem 0;
@@ -26,8 +23,4 @@
     right: 0;
     bottom: 0;
   }
-
-  /************************************************
-   *** Courses Section Headline for Course page ***
-   ************************************************/
 }

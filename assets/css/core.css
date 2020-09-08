@@ -26,7 +26,8 @@
 @import './components/aside/aside-homepage/aside-homepage.css';
 @import './components/cards/course-card.css';
 @import './components/cards/news-card.css';
-@import './components/headline/courses/courses.css';
+@import './components/headline/course page/courses.core.css';
+@import './components/headline/home page/courses.core.css';
 @import './components/headline/news/news.css';
 @import './components/navbar/nav.css';
 
