@@ -19,7 +19,12 @@
         <?php the_field('academy_course_objective_learning'); ?>
     </div>
     <div class="grid-course-container__main__learning-progress">
-<canvas id="s68-course-chart" width="225" height="225"></canvas>
+         <div class="grid-course-container__main__learning-progress__chartjs">
+            <canvas id="s68-course-chart" width="225" height="225"></canvas>
+         </div>
+         <div class="grid-course-container__main__learning-progress__description">
+             Description
+         </div>
     </div>
     <div class="grid-course-container__main__table-of-contents-header">
         <h1>Table of Content</h1>

@@ -36,6 +36,19 @@
 .grid-course-container__main__learning-progress {
   grid-area: grid-course-container__main__learning-progress;
   margin: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: 'grid-course-container__main__learning-progress__chartjs grid-course-container__main__learning-progress__description';
+}
+
+.grid-course-container__main__learning-progress__chartjs {
+  grid-template: grid-course-container__main__learning-progress__chartjs;
+}
+
+.grid-course-container__main__learning-progress__description {
+  grid-template: grid-course-container__main__learning-progress__description;
 }
 
 .grid-course-container__main__table-of-contents-header {
