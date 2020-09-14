@@ -24,6 +24,8 @@
  */
 
 @import './components/aside/aside-homepage/aside-homepage.css';
+@import './components/button/button.css';
+/* @import './components/embed/embed.css'; */
 @import './components/cards/course-card.css';
 @import './components/cards/news-card.css';
 @import './components/headline/course page/courses.core.css';
