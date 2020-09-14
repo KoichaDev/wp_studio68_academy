@@ -30,6 +30,7 @@
 @import './components/headline/home page/courses.core.css';
 @import './components/headline/news/news.css';
 @import './components/navbar/nav.css';
+@import './components/preview/preview.css';
 
 /* LAYOUTS 
  * Unique combinations of components and base styles are imported here

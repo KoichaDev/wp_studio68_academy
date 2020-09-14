@@ -15,3 +15,29 @@
 .grid-course-container__main {
   grid-area: grid-course-container__main;
 }
+
+.grid-course-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    'grid-course-intro__video-preview grid-course-intro__video-description'
+    'grid-course-intro__learning-objective grid-course-intro__learning-progress';
+}
+
+.grid-course-intro__video-preview {
+  grid-area: grid-course-intro__video-preview;
+}
+
+.grid-course-intro__video-description {
+  grid-area: grid-course-intro__video-description;
+}
+
+.grid-course-intro__learning-objective {
+  grid-area: grid-course-intro__learning-objective;
+}
+
+.grid-course-intro__learning-progress {
+  grid-area: grid-course-intro__learning-progress;
+}

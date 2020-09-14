@@ -6,8 +6,10 @@
     ?>
   <div class="grid-course-container__main">
         <div class="grid-course-intro">
-            <div class="grid-course-intro__video-preview"></div>
-            <div class="grid-course-intro__video-description"></div>
+            <div class="grid-course-intro__video-preview">video</div>
+            <div class="grid-course-intro__video-description">Description</div>
+            <div class="grid-course-intro__learning-objective">Object</div>
+            <div class="grid-course-intro__learning-progress">Progress</div>
         </div>
   </div>
 </main>
