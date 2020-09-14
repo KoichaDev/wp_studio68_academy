@@ -1,10 +1,14 @@
 @media (min-width: 992px) {
   .grid-course-container__course-headline {
     position: relative;
-    margin: auto;
+    margin: 5rem 4rem;
     background: #6301e4;
-    width: 60vw;
+    width: 90%;
     height: 93px;
+  }
+
+  .grid-course-container__course-headline__box > h1 {
+    color: #d857d9;
   }
 
   .grid-course-container__course-headline__box {
@@ -14,13 +18,14 @@
     background: #141c3a;
     color: #ffffff;
     bottom: 32%;
-    right: 61%;
+    right: 74%;
     padding: 1rem 2rem;
   }
 
   .grid-course-container__course-headline > img {
     position: absolute;
-    right: 0;
+    top: 40%;
+    right: 5%;
     bottom: 0;
   }
 }
