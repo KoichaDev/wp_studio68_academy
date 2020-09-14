@@ -50,6 +50,16 @@
 
 .grid-course-container__main__table-of-contents-skills {
   grid-area: grid-course-container__main__table-of-contents-skills;
+  margin: auto;
+  padding: 0rem 1rem;
+  color: #eed9ca;
+  width: 70%;
+}
+
+.grid-course-container__main__table-of-contents-skills > h1 {
+  color: #d857d9;
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 .grid-course-container__main__table-of-contents {

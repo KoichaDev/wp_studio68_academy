@@ -21,11 +21,20 @@
     <div class="grid-course-container__main__learning-progress">Progress</div>
     <div class="grid-course-container__main__table-of-contents-header">
         <h1>Table of Content</h1>
-        <p class="box box--width-80 box--electric-violet">
+        <p class="box box--width-80 box--electric-violet" style="margin-top: 2rem;">
             21 sections • 10 lectures • 5h 26m total length
         </p>
     </div>
-    <div class="grid-course-container__main__table-of-contents-skills">Skills</div>
+    <div class="grid-course-container__main__table-of-contents-skills">
+        <h1>Skills Covered</h1>
+        <?php 
+        $terms = get_field('academy_course_skills_tag');
+        if( $terms ): ?>
+        <?php foreach( $terms as $term ): ?>
+                <p class="box box--electric-violet" style="display: inline-block; margin: 0.5rem 1px;"><?php echo esc_html( $term->name ); ?></p>
+            <?php endforeach; ?>
+        <?php endif; ?>           
+    </div>
     <div class="grid-course-container__main__table-of-contents">
         <?php the_field('academy_table_of_contents'); ?>
     </div>
