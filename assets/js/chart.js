@@ -24,10 +24,14 @@ export default class ChartJs {
                     borderWidth: 1
                 }]
             },
+
             options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                cutoutPercentage: 70, // Change the doughnut Graph size
+                responsive: false,
+                maintainAspectRatio: false,
+                cutoutPercentage: 80, // Change the doughnut Graph size
+                legend: {
+                    display: false,
+                },
                 scales: {
                     xAxes: [{
                         gridLines: {
@@ -57,14 +61,14 @@ export default class ChartJs {
                     ctx = chart.chart.ctx;
 
                 ctx.restore();
-                const fontSize = (height / 90).toFixed(2);
+                const fontSize = (height / 80).toFixed(2);
                 ctx.font = fontSize + "em sans-serif";
                 ctx.textBaseline = "middle";
                 ctx.fillStyle = "#EED9CA";
 
                 const text = data[0] + "%",
                     textX = Math.round((width - ctx.measureText(text).width) / 2 + 12),
-                    textY = height / 2 + 13;
+                    textY = height / 2;
 
                 ctx.fillText(text, textX, textY);
                 ctx.save();

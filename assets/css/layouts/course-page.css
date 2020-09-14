@@ -35,7 +35,7 @@
 
 .grid-course-container__main__learning-progress {
   grid-area: grid-course-container__main__learning-progress;
-  margin: auto;
+  margin: 4rem;
 }
 
 .grid-course-container__main__table-of-contents-header {
