@@ -5,12 +5,13 @@ export default class ChartJs {
     }
 
     event() {
+        const data = [60, 40]; // Dummy data! We will use this data for getting real progress data later
         new Chart(this.ctx, {
             type: 'doughnut',
             data: {
                 labels: ['Incomplete', 'Complete'],
                 datasets: [{
-                    data: [60, 40],
+                    data: data,
                     backgroundColor: [
                         'rgba(204, 71, 115, 1)',
                         'rgba(71, 204, 160, 1)',
@@ -49,6 +50,25 @@ export default class ChartJs {
                 }
             }
         });
-    }
+        Chart.pluginService.register({
+            beforeDraw: (chart) => {
+                const width = chart.chart.width,
+                    height = chart.chart.height,
+                    ctx = chart.chart.ctx;
 
+                ctx.restore();
+                const fontSize = (height / 90).toFixed(2);
+                ctx.font = fontSize + "em sans-serif";
+                ctx.textBaseline = "middle";
+                ctx.fillStyle = "#EED9CA";
+
+                const text = data[0] + "%",
+                    textX = Math.round((width - ctx.measureText(text).width) / 2 + 12),
+                    textY = height / 2 + 13;
+
+                ctx.fillText(text, textX, textY);
+                ctx.save();
+            }
+        });
+    }
 }
