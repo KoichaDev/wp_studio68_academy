@@ -19,6 +19,9 @@
         <?php the_field('academy_course_objective_learning'); ?>
     </div>
     <div class="grid-course-container__main__learning-progress">Progress</div>
+    <div class="grid-course-container__main__table-of-contents">
+        <?php the_field('academy_table_of_contents'); ?>
+    </div>
   </main>
 
 <?php get_footer(); ?>

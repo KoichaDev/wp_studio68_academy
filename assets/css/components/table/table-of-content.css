@@ -1,0 +1,12 @@
+.grid-course-container__main__table-of-contents > hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #cc4773;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.grid-course-container__main__table-of-contents > table > tbody > tr > td {
+  padding: 1rem 0;
+}
