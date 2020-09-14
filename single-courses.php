@@ -16,8 +16,6 @@
         <a href="#" class="btn btn--yellow btn-hover--purple">Get Started »</a>
     </div>
     <div class="grid-course-container__main__learning-objective">
-        <h1>Learning Objectives</h1>
-        <br>
         <?php the_field('academy_course_objective_learning'); ?>
     </div>
     <div class="grid-course-container__main__learning-progress">Progress</div>
