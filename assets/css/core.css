@@ -24,6 +24,7 @@
  */
 
 @import './components/aside/aside-homepage/aside-homepage.css';
+@import './components/box/box.css';
 @import './components/button/button.css';
 /* @import './components/embed/embed.css'; */
 @import './components/cards/course-card.css';

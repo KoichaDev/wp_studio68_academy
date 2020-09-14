@@ -9,6 +9,8 @@
   grid-template-areas:
     'grid-course-container__main__video-preview grid-course-container__main__video-description'
     'grid-course-container__main__learning-objective grid-course-container__main__learning-progress'
+    'grid-course-container__main__learning-objective grid-course-container__main__learning-progress'
+    'grid-course-container__main__table-of-contents-header grid-course-container__main__table-of-contents-skills'
     'grid-course-container__main__table-of-contents grid-course-container__main__table-of-contents';
 }
 
@@ -34,6 +36,20 @@
 .grid-course-container__main__learning-progress {
   grid-area: grid-course-container__main__learning-progress;
   margin: auto;
+}
+
+.grid-course-container__main__table-of-contents-header {
+  grid-area: grid-course-container__main__table-of-contents-header;
+  padding: 0 2rem;
+}
+
+.grid-course-container__main__table-of-contents-header > h1 {
+  color: #d857d9;
+  margin: 1rem 0;
+}
+
+.grid-course-container__main__table-of-contents-skills {
+  grid-area: grid-course-container__main__table-of-contents-skills;
 }
 
 .grid-course-container__main__table-of-contents {

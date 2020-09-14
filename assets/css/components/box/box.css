@@ -1,0 +1,14 @@
+.box {
+  background: black;
+  color: white;
+  padding: 0.375rem 0.75rem;
+}
+
+.box--width-80 {
+  width: 80%;
+}
+
+.box--electric-violet {
+  background: #6301e4;
+  color: #facc5f;
+}

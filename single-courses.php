@@ -19,6 +19,13 @@
         <?php the_field('academy_course_objective_learning'); ?>
     </div>
     <div class="grid-course-container__main__learning-progress">Progress</div>
+    <div class="grid-course-container__main__table-of-contents-header">
+        <h1>Table of Content</h1>
+        <p class="box box--width-80 box--electric-violet">
+            21 sections • 10 lectures • 5h 26m total length
+        </p>
+    </div>
+    <div class="grid-course-container__main__table-of-contents-skills">Skills</div>
     <div class="grid-course-container__main__table-of-contents">
         <?php the_field('academy_table_of_contents'); ?>
     </div>
