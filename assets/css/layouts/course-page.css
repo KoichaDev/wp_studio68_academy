@@ -1,43 +1,40 @@
-.grid-course-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas:
-    'grid-course-container__course-headline'
-    'grid-course-container__main';
-}
-
-.grid-course-container__course-headline {
-  grid-area: grid-course-container__course-headline;
-}
-
 .grid-course-container__main {
-  grid-area: grid-course-container__main;
-}
-
-.grid-course-intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  background: #141b3a;
+  width: 90%;
+  margin: -3rem 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: 1fr 1fr;
   gap: 1px 1px;
   grid-template-areas:
-    'grid-course-intro__video-preview grid-course-intro__video-description'
-    'grid-course-intro__learning-objective grid-course-intro__learning-progress';
+    'grid-course-container__main__video-preview grid-course-container__main__video-description'
+    'grid-course-container__main__learning-objective grid-course-container__main__learning-progress';
 }
 
-.grid-course-intro__video-preview {
-  grid-area: grid-course-intro__video-preview;
+.grid-course-container__main__video-preview {
+  grid-area: grid-course-container__main__video-preview;
+  margin: auto;
+  padding: 1rem 2rem;
 }
 
-.grid-course-intro__video-description {
-  grid-area: grid-course-intro__video-description;
+.grid-course-container__main__video-description {
+  grid-area: grid-course-container__main__video-description;
+  margin: auto;
+  padding: 5rem 1rem;
+  color: #eed9ca;
+  width: 70%;
 }
 
-.grid-course-intro__learning-objective {
-  grid-area: grid-course-intro__learning-objective;
+.grid-course-container__main__learning-objective {
+  grid-area: grid-course-container__main__learning-objective;
+  margin: auto;
 }
 
-.grid-course-intro__learning-progress {
-  grid-area: grid-course-intro__learning-progress;
+.grid-course-container__main__learning-objective > h1 {
+  color: #d857d9;
+}
+
+.grid-course-container__main__learning-progress {
+  grid-area: grid-course-container__main__learning-progress;
+  margin: auto;
 }
