@@ -5891,6 +5891,7 @@ var ChartJs = /*#__PURE__*/function () {
                 display: false
               },
               ticks: {
+                display: false,
                 beginAtZero: true
               }
             }],
@@ -5899,6 +5900,7 @@ var ChartJs = /*#__PURE__*/function () {
                 display: false
               },
               ticks: {
+                display: false,
                 beginAtZero: true
               }
             }]

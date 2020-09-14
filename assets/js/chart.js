@@ -30,6 +30,7 @@ export default class ChartJs {
                             display: false,
                         },
                         ticks: {
+                            display: false,
                             beginAtZero: true
                         }
                     }],
@@ -38,6 +39,7 @@ export default class ChartJs {
                             display: false,
                         },
                         ticks: {
+                            display: false,
                             beginAtZero: true
                         }
                     }]
