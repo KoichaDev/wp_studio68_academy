@@ -5876,7 +5876,7 @@ var ChartJs = /*#__PURE__*/function () {
       new Chart(this.ctx, {
         type: 'doughnut',
         data: {
-          labels: ['Complete', 'Incomplete'],
+          labels: ['Incomplete', 'Complete'],
           datasets: [{
             data: [60, 40],
             backgroundColor: ['rgba(204, 71, 115, 1)', 'rgba(71, 204, 160, 1)'],
@@ -5885,6 +5885,8 @@ var ChartJs = /*#__PURE__*/function () {
           }]
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: true,
           scales: {
             xAxes: [{
               gridLines: {

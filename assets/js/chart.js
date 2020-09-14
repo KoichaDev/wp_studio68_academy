@@ -8,7 +8,7 @@ export default class ChartJs {
         new Chart(this.ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Complete', 'Incomplete'],
+                labels: ['Incomplete', 'Complete'],
                 datasets: [{
                     data: [60, 40],
                     backgroundColor: [
@@ -24,6 +24,8 @@ export default class ChartJs {
                 }]
             },
             options: {
+                responsive: true,
+                maintainAspectRatio: true,
                 scales: {
                     xAxes: [{
                         gridLines: {
