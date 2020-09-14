@@ -8,9 +8,12 @@
         // This will enforcing our WP to get our scripts
         wp_register_style('s68_css_style', $uri . '/assets/css/core.css', [], $check_version);
         wp_register_script('s68_script_js', $uri . '/dist/script.js', [], $check_version);
- 
+        wp_register_script('s68_chart_js', '//cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js', [], $check_version);
+        
+        
         // This will load our scripts to work
         wp_enqueue_style('s68_css_style');
         wp_enqueue_script('s68_script_js');
+        wp_enqueue_script('s68_chart_js');
     }
 ?>
