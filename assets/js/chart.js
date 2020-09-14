@@ -26,6 +26,7 @@ export default class ChartJs {
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                cutoutPercentage: 70, // Change the doughnut Graph size
                 scales: {
                     xAxes: [{
                         gridLines: {
