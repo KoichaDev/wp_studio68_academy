@@ -42,5 +42,5 @@
  * Each stylesheet contains all component style overrides, and specific layout only attributes
  */
 
-@import './layouts/course-page.css';
+@import './layouts/course-page/course-page.core.css';
 @import './layouts/home-page.css';
