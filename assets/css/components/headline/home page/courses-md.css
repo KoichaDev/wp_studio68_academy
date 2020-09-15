@@ -51,6 +51,13 @@
     bottom: 0;
   }
 
+  .label-triangle {
+    width: 2rem;
+    height: 2rem;
+    top: 121%;
+    right: 96%;
+  }
+
   .main-grid-container__course__headline > img:nth-child(2) {
     display: none;
   }

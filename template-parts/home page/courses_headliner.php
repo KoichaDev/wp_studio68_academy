@@ -8,19 +8,15 @@
     class="box box--absolute box--bright-sun" 
     style="
     top: 62%; left: -2%; 
-    width: 22%; height: 60%; 
-    font-weight: bold; font-size: 1.2rem; padding: 1rem;"
+    width: 22vw; height: 60%; 
+    font-weight: bold; font-size: 3.5vw; padding: 10px;"
     >Freelancer
     </h3>
     <span 
     class=
-    "triangle--position 
+    "label-triangle triangle--position 
     triangle--rotate-minus-90-degree 
     triangle--old-gold"
-    style="
-    width: 2rem; height: 2rem; 
-    top: 121%; right: 96%;
-    ";
     ></span>
 
 </section>
