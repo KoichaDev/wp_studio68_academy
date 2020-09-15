@@ -31,7 +31,7 @@
 @import './components/cards/news-card.css';
 @import './components/headline/course page/courses.core.css';
 @import './components/headline/home page/courses.core.css';
-@import './components/headline/news/news.css';
+@import './components/headline/news/news.core.css';
 @import './components/navbar/nav.css';
 @import './components/preview/preview.css';
 @import './components/shape/shape.css';

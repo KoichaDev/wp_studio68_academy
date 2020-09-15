@@ -9,13 +9,11 @@
 
   .main-grid-container__news_headliner__box {
     position: absolute;
-    width: 25vw;
-    height: 5rem;
+    height: 6rem;
     background: #47cca0;
     color: #a047cc;
-    bottom: 32%;
-    right: 61%;
-    padding: 1.2rem 2rem;
+    bottom: 18%;
+    padding: 1rem 2rem;
   }
 
   .main-grid-container__news_headliner > img {
