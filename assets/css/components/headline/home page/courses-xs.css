@@ -9,12 +9,12 @@
 
   .main-grid-container__course__headline__box {
     position: absolute;
-    width: 25vw;
+    width: 68vw;
     height: 5rem;
     background: #141c3a;
     color: #ffffff;
     bottom: 32%;
-    right: 69%;
+    right: 11%;
     padding: 1rem 2rem;
   }
 
@@ -22,5 +22,12 @@
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+
+  .label-triangle {
+    width: 2rem;
+    height: 2rem;
+    top: 121%;
+    right: 96%;
   }
 }
