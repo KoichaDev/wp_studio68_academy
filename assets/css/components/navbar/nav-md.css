@@ -24,7 +24,6 @@
     position: absolute;
     background: #47cca0;
     top: 0;
-    left: 70%;
     right: 0;
     bottom: 0;
   }
@@ -36,7 +35,7 @@
 
   .header__overlay > ul > li > img {
     position: relative;
-    right: 50%;
+    right: 92%;
     width: 75px;
     bottom: 20%;
     min-height: 76px;
@@ -44,7 +43,7 @@
     border-radius: 50%;
   }
   .header__overlay > ul {
-    padding: 2rem 0;
+    padding: 2rem 2rem;
   }
 
   .header__overlay > ul > li:nth-child(2) > p:nth-child(1) {

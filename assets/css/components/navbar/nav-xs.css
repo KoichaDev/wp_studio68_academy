@@ -28,7 +28,6 @@
     position: absolute;
     background: #47cca0;
     top: 0;
-    left: 70%;
     right: 0;
     bottom: 0;
   }
@@ -40,7 +39,7 @@
 
   .header__overlay > ul > li > img {
     position: relative;
-    right: 50%;
+    right: 4.2vw;
     width: 75px;
     bottom: 20%;
     min-height: 76px;
