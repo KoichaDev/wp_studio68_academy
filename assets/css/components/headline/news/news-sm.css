@@ -17,9 +17,22 @@
     padding: 1rem 2rem;
   }
 
-  .main-grid-container__news_headliner > img {
+  .main-grid-container__news_headliner__box > h1 {
+    font-size: 5.5vw;
+    text-align: center;
+  }
+
+  .main-grid-container__news_headliner > img:nth-child(1) {
+    display: none;
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+
+  .main-grid-container__news_headliner > img:nth-child(2) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 83%;
   }
 }
