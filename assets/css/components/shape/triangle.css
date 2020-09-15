@@ -1,0 +1,11 @@
+.triangle--position {
+  position: absolute;
+}
+
+.triangle--rotate-minus-90-degree {
+  clip-path: polygon(100% 0, 0 0, 99% 48%);
+}
+
+.triangle--old-gold {
+  background: #cc9f33;
+}

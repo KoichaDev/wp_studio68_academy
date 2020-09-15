@@ -3,23 +3,38 @@
     position: relative;
     margin: 2rem 0;
     background: #6301e4;
-    width: 60vw;
+    width: 87%;
     height: 93px;
   }
 
   .main-grid-container__course__headline__box {
     position: absolute;
-    width: 25vw;
-    height: 5rem;
+    width: 91%;
+    height: 6rem;
     background: #141c3a;
     color: #ffffff;
-    bottom: 32%;
-    right: 61%;
+    bottom: 18%;
+    /* right: 69%; */
     padding: 1rem 2rem;
   }
 
-  .main-grid-container__course__headline > img {
+  .main-grid-container__course__headline__box > h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 11px;
+  }
+
+  .main-grid-container__course__headline > img:nth-child(1) {
+    display: none;
     position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .main-grid-container__course__headline > img:nth-child(2) {
+    display: inline-block;
+    position: absolute;
+    top: 99%;
     right: 0;
     bottom: 0;
   }

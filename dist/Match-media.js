@@ -135,20 +135,21 @@ var Element = function Element() {
   _classCallCheck(this, Element);
 
   _defineProperty(this, "event", function () {
-    _this.removeClass();
+    _this.removeClass('(max-width: 876px)', _this.aside);
   });
 
-  _defineProperty(this, "removeClass", function () {
-    var mql = window.matchMedia('(max-width: 876px)');
+  _defineProperty(this, "removeClass", function (mediaWidth, element) {
+    var mql = window.matchMedia(mediaWidth);
 
     if (mql.matches) {
-      _this.main.children[0].remove();
+      element.remove();
     }
   });
 
-  _defineProperty(this, "addClass", function () {});
-
   this.main = document.querySelector('.main-grid-container');
+  this.aside = document.querySelector('.main-grid-container > .main-grid-container__aside');
+  this.courseHeadline = document.querySelector('.main-grid-container__course__headline');
+  this.courseHeadlineImage = document.querySelector('.main-grid-container__course__headline > img');
   this.event();
 };
 
@@ -181,7 +182,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65521" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60351" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

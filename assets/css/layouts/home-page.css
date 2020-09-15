@@ -46,6 +46,20 @@
   grid-area: main-grid-container__news_headliner;
 }
 
+@media (min-width: 876px) {
+  .main-grid-container__course__headline > h3 {
+    display: none;
+  }
+
+  .main-grid-container__course__headline > div:nth-child(2) {
+    display: none;
+  }
+
+  .main-grid-container__course__headline > span {
+    display: none;
+  }
+}
+
 @media (max-width: 876px) {
   .main-grid-container {
     display: grid;
