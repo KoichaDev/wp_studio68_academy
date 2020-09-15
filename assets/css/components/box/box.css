@@ -12,3 +12,15 @@
   background: #6301e4;
   color: #facc5f;
 }
+
+.box-rectangle--mulberry {
+  background: #cc4773;
+  width: 5px;
+  height: 18px;
+}
+
+.box-rectangle--shamrock {
+  background: #47cca0;
+  width: 5px;
+  height: 18px;
+}

@@ -35,7 +35,6 @@
 
 .grid-course-container__main__learning-progress {
   grid-area: grid-course-container__main__learning-progress;
-  margin: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -45,10 +44,44 @@
 
 .grid-course-container__main__learning-progress__chartjs {
   grid-template: grid-course-container__main__learning-progress__chartjs;
+  margin-top: 4rem;
+  margin-left: 4rem;
 }
 
 .grid-course-container__main__learning-progress__description {
   grid-template: grid-course-container__main__learning-progress__description;
+  margin: 4rem 3rem;
+}
+
+.grid-course-container__main__learning-progress__description > h2 {
+  color: #d857d9;
+  font-size: 1.25rem;
+}
+
+.grid-course-container__main__learning-progress__description ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.grid-course-container__main__learning-progress__description ul li {
+  color: #ffc740;
+  margin: 5px 0;
+}
+
+.grid-course-container__main__learning-progress__description ul li:nth-child(1) {
+  margin-right: auto;
+}
+
+.grid-course-container__main__learning-progress__description ul li p {
+  color: #eed9ca;
+  padding: 0 1rem;
+}
+
+.grid-course-container__main__learning-progress__description > p {
+  color: #eed9ca;
+  margin: 0.5rem 0;
+  font-size: small;
 }
 
 .grid-course-container__main__table-of-contents-header {

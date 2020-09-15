@@ -23,7 +23,35 @@
             <canvas id="s68-course-chart" width="225" height="225"></canvas>
          </div>
          <div class="grid-course-container__main__learning-progress__description">
-             Description
+             <h2>Complete Progress</h2>
+             <p>11 of 13 lessons Completed</p>
+             <ul>
+                 <li>
+                    <h3>Incomplete</h3> 
+                 </li>
+                 <li>
+                    <p>
+                        <small>40%</small>
+                    </p>
+                 </li>
+                 <li>
+                     <div class="box box-rectangle--mulberry" style="padding: 0;"></div>
+                 </li>
+             </ul>
+             <ul>
+                 <li>
+                    <h3>Complete</h3> 
+                 </li>
+                 <li>
+                    <p>
+                        <small>60%</small>
+                    </p>
+                 </li>
+                 <li>
+                     <div class="box box-rectangle--shamrock" style="padding: 0;"></div>
+                 </li>
+             </ul>
+             
          </div>
     </div>
     <div class="grid-course-container__main__table-of-contents-header">
