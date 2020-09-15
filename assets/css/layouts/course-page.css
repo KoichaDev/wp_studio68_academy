@@ -84,6 +84,37 @@
   font-size: small;
 }
 
+.grid-course-container__main__learning-progress__description > hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 4px solid #6301e4;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.grid-course-container__main__learning-progress__description ul:nth-child(6) {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-course-container__main__learning-progress__description ul:nth-child(6) > li:nth-child(1) {
+  color: #d857d9;
+  font-size: 3rem;
+  margin-bottom: -2rem;
+}
+
+.grid-course-container__main__learning-progress__description ul:nth-child(6) > li:nth-child(2) > p {
+  padding: 0 1rem;
+}
+
+.grid-course-container__main__learning-progress__description ul:nth-child(6) > li:nth-child(3) {
+  color: #d857d9;
+  font-size: 3rem;
+  margin-left: auto;
+  margin-top: -1rem;
+}
+
 .grid-course-container__main__table-of-contents-header {
   grid-area: grid-course-container__main__table-of-contents-header;
   padding: 0 2rem;

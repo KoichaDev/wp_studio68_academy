@@ -51,7 +51,14 @@
                      <div class="box box-rectangle--shamrock" style="padding: 0;"></div>
                  </li>
              </ul>
-             
+             <hr>
+             <ul>
+                 <li>“</li>
+                 <li>
+                    <p data-motivation-quote>You are almost there! You can do it! Go go! ✊</p>
+                 </li>
+                 <li>“</li>
+             </ul>
          </div>
     </div>
     <div class="grid-course-container__main__table-of-contents-header">
