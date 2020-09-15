@@ -23,7 +23,7 @@ export default class ChartJs {
             count++;
 
             // Update the UI
-            counter.innerHTML = `<small>${count}%</small>`;
+            counter.innerHTML = `${count}%`;
 
             // if the count is less than 500, run it again
             if (count < number) {

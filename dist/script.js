@@ -5878,7 +5878,7 @@ var ChartJs = /*#__PURE__*/function () {
         // Increase count by 1
         count++; // Update the UI
 
-        counter.innerHTML = "<small>".concat(count, "%</small>"); // if the count is less than 500, run it again
+        counter.innerHTML = "".concat(count, "%"); // if the count is less than 500, run it again
 
         if (count < number) {
           window.requestAnimationFrame(countUp);
