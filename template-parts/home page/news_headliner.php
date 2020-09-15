@@ -4,4 +4,13 @@
     <div class="main-grid-container__news_headliner__box">
         <h1>News & Noteworthy</h1>
     </div>
+    <h3 
+    class="label-user box box--absolute box--bright-sun">Important
+    </h3>
+    <span 
+    class=
+    "label-triangle triangle--position 
+    triangle--rotate-minus-90-degree 
+    triangle--old-gold"
+    ></span>
 </section>
