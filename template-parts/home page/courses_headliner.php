@@ -5,12 +5,7 @@
         <h1>Your Courses</h1>
     </div>
     <h3 
-    class="box box--absolute box--bright-sun" 
-    style="
-    top: 62%; left: -2%; 
-    width: 22vw; height: 60%; 
-    font-weight: bold; font-size: 3.5vw; padding: 10px;"
-    >Freelancer
+    class="label-user box box--absolute box--bright-sun">Freelancer
     </h3>
     <span 
     class=

@@ -24,6 +24,16 @@
     padding-top: 11px;
   }
 
+  .label-user {
+    top: 62%;
+    left: -2%;
+    width: 22vw;
+    height: 60%;
+    font-weight: bold;
+    font-size: 3.5vw;
+    padding: 10px;
+  }
+
   .main-grid-container__course__headline > img:nth-child(1) {
     display: none;
     position: absolute;
