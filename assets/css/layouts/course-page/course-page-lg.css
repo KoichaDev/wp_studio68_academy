@@ -8,21 +8,20 @@
     grid-template-rows: 1fr 1fr;
     gap: 1px 1px;
     grid-template-areas:
-      'grid-course-container__main__video-preview grid-course-container__main__video-description'
-      'grid-course-container__main__learning-objective grid-course-container__main__learning-progress'
-      'grid-course-container__main__learning-objective grid-course-container__main__learning-progress'
-      'grid-course-container__main__table-of-contents-header grid-course-container__main__table-of-contents-skills'
-      'grid-course-container__main__table-of-contents grid-course-container__main__table-of-contents';
+      'video-preview course-description'
+      'learning-objective learning-progress'
+      'table-of-contents-header table-of-contents-skills'
+      'table-of-contents table-of-contents';
   }
 
   .grid-course-container__main__video-preview {
-    grid-area: grid-course-container__main__video-preview;
+    grid-area: video-preview;
     margin: auto;
     padding: 1rem 2rem;
   }
 
   .grid-course-container__main__video-description {
-    grid-area: grid-course-container__main__video-description;
+    grid-area: course-description;
     margin: auto;
     padding: 5rem 1rem;
     color: #eed9ca;
@@ -30,12 +29,12 @@
   }
 
   .grid-course-container__main__learning-objective {
-    grid-area: grid-course-container__main__learning-objective;
+    grid-area: learning-objective;
     margin: auto;
   }
 
   .grid-course-container__main__learning-progress {
-    grid-area: grid-course-container__main__learning-progress;
+    grid-area: learning-progress;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -120,7 +119,7 @@
   }
 
   .grid-course-container__main__table-of-contents-header {
-    grid-area: grid-course-container__main__table-of-contents-header;
+    grid-area: table-of-contents-header;
     padding: 0 2rem;
   }
 
@@ -130,7 +129,7 @@
   }
 
   .grid-course-container__main__table-of-contents-skills {
-    grid-area: grid-course-container__main__table-of-contents-skills;
+    grid-area: table-of-contents-skills;
     margin: auto;
     padding: 0rem 1rem;
     color: #eed9ca;
@@ -144,7 +143,7 @@
   }
 
   .grid-course-container__main__table-of-contents {
-    grid-area: grid-course-container__main__table-of-contents;
+    grid-area: table-of-contents;
     padding: 0 2rem;
     padding-bottom: 4rem;
   }
