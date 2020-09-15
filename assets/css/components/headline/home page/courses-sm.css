@@ -34,6 +34,13 @@
     padding: 10px;
   }
 
+  .label-triangle {
+    width: 2rem;
+    height: 2rem;
+    top: 121%;
+    right: 95%;
+  }
+
   .main-grid-container__course__headline > img:nth-child(1) {
     display: none;
     position: absolute;
