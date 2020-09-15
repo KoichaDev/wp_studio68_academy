@@ -131,20 +131,37 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var ChartJs = /*#__PURE__*/function () {
   function ChartJs() {
+    var _this = this;
+
     _classCallCheck(this, ChartJs);
 
-    this.ctx = document.getElementById('s68-course-chart').getContext('2d');
-    this.event();
-  }
+    _defineProperty(this, "counterUp", function (element, number) {
+      var counter = element;
+      var count = 0;
 
-  _createClass(ChartJs, [{
-    key: "event",
-    value: function event() {
-      var data = [60, 40]; // Dummy data! We will use this data for getting real progress data later
+      var countUp = function countUp() {
+        // Increase count by 1
+        count++; // Update the UI
 
-      new Chart(this.ctx, {
+        counter.innerHTML = "<small>".concat(count, "%</small>"); // if the count is less than 500, run it again
+
+        if (count < number) {
+          window.requestAnimationFrame(countUp);
+        }
+      }; // Start the animation
+
+
+      window.requestAnimationFrame(countUp);
+    });
+
+    _defineProperty(this, "chartDoughnut", function (complete, incomplete) {
+      var data = [complete, incomplete]; // Dummy data! We will use this data for getting real progress data later
+
+      new Chart(_this.ctx, {
         type: 'doughnut',
         data: {
           labels: ['Incomplete', 'Complete'],
@@ -202,6 +219,21 @@ var ChartJs = /*#__PURE__*/function () {
           ctx.save();
         }
       });
+    });
+
+    this.ctx = document.getElementById('s68-course-chart').getContext('2d');
+    this.inComplete = document.querySelector('[data-incomplete]');
+    this.complete = document.querySelector('[data-complete]');
+    this.event();
+  } // Event Listener 
+
+
+  _createClass(ChartJs, [{
+    key: "event",
+    value: function event() {
+      this.chartDoughnut(60, 40);
+      this.counterUp(this.inComplete, 60);
+      this.counterUp(this.complete, 40);
     }
   }]);
 
@@ -237,7 +269,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64495" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59531" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

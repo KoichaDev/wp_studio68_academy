@@ -30,7 +30,7 @@
                     <h3>Incomplete</h3> 
                  </li>
                  <li>
-                    <p>
+                    <p data-incomplete>
                         <small>40%</small>
                     </p>
                  </li>
@@ -43,7 +43,7 @@
                     <h3>Complete</h3> 
                  </li>
                  <li>
-                    <p>
+                    <p data-complete>
                         <small>60%</small>
                     </p>
                  </li>

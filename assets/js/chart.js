@@ -1,11 +1,43 @@
 export default class ChartJs {
     constructor() {
         this.ctx = document.getElementById('s68-course-chart').getContext('2d');
+        this.inComplete = document.querySelector('[data-incomplete]');
+        this.complete = document.querySelector('[data-complete]');
+
         this.event();
     }
 
+    // Event Listener 
     event() {
-        const data = [60, 40]; // Dummy data! We will use this data for getting real progress data later
+        this.chartDoughnut(60, 40);
+        this.counterUp(this.inComplete, 60);
+        this.counterUp(this.complete, 40);
+    }
+
+    counterUp = (element, number) => {
+        const counter = element
+        let count = 0;
+
+        const countUp = () => {
+            // Increase count by 1
+            count++;
+
+            // Update the UI
+            counter.innerHTML = `<small>${count}%</small>`;
+
+            // if the count is less than 500, run it again
+            if (count < number) {
+                window.requestAnimationFrame(countUp);
+            }
+        };
+
+        // Start the animation
+        window.requestAnimationFrame(countUp);
+    }
+
+    // Triggering the Event Listener
+    chartDoughnut = (complete, incomplete) => {
+        const data = [complete, incomplete]; // Dummy data! We will use this data for getting real progress data later
         new Chart(this.ctx, {
             type: 'doughnut',
             data: {
