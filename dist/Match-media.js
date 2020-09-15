@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"chart.js":[function(require,module,exports) {
+})({"Match-media.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -127,120 +127,32 @@ exports.default = void 0;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var ChartJs = /*#__PURE__*/function () {
-  function ChartJs() {
-    var _this = this;
+var Element = function Element() {
+  var _this = this;
 
-    _classCallCheck(this, ChartJs);
+  _classCallCheck(this, Element);
 
-    _defineProperty(this, "counterUp", function (element, number) {
-      var counter = element;
-      var count = 0;
+  _defineProperty(this, "event", function () {
+    _this.removeClass();
+  });
 
-      var countUp = function countUp() {
-        // Increase count by 1
-        count++; // Update the UI
+  _defineProperty(this, "removeClass", function () {
+    var mql = window.matchMedia('(max-width: 876px)');
 
-        counter.innerHTML = "".concat(count, "%"); // if the count is less than 500, run it again
-
-        if (count < number) {
-          window.requestAnimationFrame(countUp);
-        }
-      }; // Start the animation
-
-
-      window.requestAnimationFrame(countUp);
-    });
-
-    _defineProperty(this, "chartDoughnut", function (complete, incomplete) {
-      var data = [complete, incomplete]; // Dummy data! We will use this data for getting real progress data later
-
-      new Chart(_this.ctx, {
-        type: 'doughnut',
-        data: {
-          labels: ['Incomplete', 'Complete'],
-          datasets: [{
-            data: data,
-            backgroundColor: ['rgba(204, 71, 115, 1)', 'rgba(71, 204, 160, 1)'],
-            borderColor: ['rgba(204, 71, 115, 1)', 'rgba(71, 204, 160, 1)'],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: false,
-          maintainAspectRatio: false,
-          cutoutPercentage: 80,
-          // Change the doughnut Graph size
-          legend: {
-            display: false
-          },
-          scales: {
-            xAxes: [{
-              gridLines: {
-                display: false
-              },
-              ticks: {
-                display: false,
-                beginAtZero: true
-              }
-            }],
-            yAxes: [{
-              gridLines: {
-                display: false
-              },
-              ticks: {
-                display: false,
-                beginAtZero: true
-              }
-            }]
-          }
-        }
-      });
-      Chart.pluginService.register({
-        beforeDraw: function beforeDraw(chart) {
-          var width = chart.chart.width,
-              height = chart.chart.height,
-              ctx = chart.chart.ctx;
-          ctx.restore();
-          var fontSize = (height / 80).toFixed(2);
-          ctx.font = fontSize + "em sans-serif";
-          ctx.textBaseline = "middle";
-          ctx.fillStyle = "#EED9CA";
-          var text = data[0] + "%",
-              textX = Math.round((width - ctx.measureText(text).width) / 2 + 12),
-              textY = height / 2;
-          ctx.fillText(text, textX, textY);
-          ctx.save();
-        }
-      });
-    });
-
-    this.ctx = document.getElementById('s68-course-chart').getContext('2d');
-    this.inComplete = document.querySelector('[data-incomplete]');
-    this.complete = document.querySelector('[data-complete]');
-    this.event();
-  } // Event Listener 
-
-
-  _createClass(ChartJs, [{
-    key: "event",
-    value: function event() {
-      this.chartDoughnut(60, 40);
-      this.counterUp(this.inComplete, 60);
-      this.counterUp(this.complete, 40);
+    if (mql.matches) {
+      _this.main.children[0].remove();
     }
-  }]);
+  });
 
-  return ChartJs;
-}();
+  _defineProperty(this, "addClass", function () {});
 
-exports.default = ChartJs;
+  this.main = document.querySelector('.main-grid-container');
+  this.event();
+};
+
+exports.default = Element;
 },{}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -445,5 +357,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","chart.js"], null)
-//# sourceMappingURL=/chart.js.map
+},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","Match-media.js"], null)
+//# sourceMappingURL=/Match-media.js.map

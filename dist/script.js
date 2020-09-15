@@ -5972,6 +5972,42 @@ var ChartJs = /*#__PURE__*/function () {
 }();
 
 exports.default = ChartJs;
+},{}],"Match-media.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Element = function Element() {
+  var _this = this;
+
+  _classCallCheck(this, Element);
+
+  _defineProperty(this, "event", function () {
+    _this.removeClass();
+  });
+
+  _defineProperty(this, "removeClass", function () {
+    var mql = window.matchMedia('(max-width: 876px)');
+
+    if (mql.matches) {
+      _this.main.children[0].remove();
+    }
+  });
+
+  _defineProperty(this, "addClass", function () {});
+
+  this.main = document.querySelector('.main-grid-container');
+  this.event();
+};
+
+exports.default = Element;
 },{}],"script.js":[function(require,module,exports) {
 "use strict";
 
@@ -5979,13 +6015,16 @@ var _timezone = _interopRequireDefault(require("./timezone"));
 
 var _chart = _interopRequireDefault(require("./chart"));
 
+var _MatchMedia = _interopRequireDefault(require("./Match-media"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
+  new _MatchMedia.default();
   new _timezone.default();
   new _chart.default();
 });
-},{"./timezone":"timezone.js","./chart":"chart.js"}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./timezone":"timezone.js","./chart":"chart.js","./Match-media":"Match-media.js"}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -6013,7 +6052,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59531" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65521" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

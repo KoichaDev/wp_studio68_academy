@@ -45,3 +45,18 @@
 .main-grid-container__news_headliner {
   grid-area: main-grid-container__news_headliner;
 }
+
+@media (max-width: 876px) {
+  .main-grid-container {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      'main-grid-container__aside main-grid-container__user-courses'
+      'main-grid-container__aside main-grid-container__course__headline'
+      'main-grid-container__aside main-grid-container__courses'
+      'main-grid-container__aside main-grid-container__news_headliner'
+      'main-grid-container__aside main-grid-container__news';
+  }
+}

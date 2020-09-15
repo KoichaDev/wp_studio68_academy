@@ -13,3 +13,9 @@
 .aside-homepage-sticky > ul > li {
   padding: 0.5rem 1rem;
 }
+
+@media (max-width: 876px) {
+  .main-grid-container__aside {
+    display: none;
+  }
+}
