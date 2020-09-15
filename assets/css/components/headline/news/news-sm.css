@@ -2,7 +2,7 @@
   .main-grid-container__news_headliner {
     position: relative;
     margin: 4rem 0;
-    background: #6301e4;
+    background: #1f9393;
     width: 87%;
     height: 93px;
   }
@@ -11,8 +11,8 @@
     position: absolute;
     width: 91%;
     height: 6rem;
-    background: #47cca0;
-    color: #a047cc;
+    background: #591f93;
+    color: #ffffff;
     bottom: 18%;
     padding: 1rem 2rem;
   }
