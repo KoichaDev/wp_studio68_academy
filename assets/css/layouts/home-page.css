@@ -40,6 +40,7 @@
 
 .main-grid-container__course__headline {
   grid-area: main-grid-container__course__headline;
+  margin-top: 5rem;
 }
 
 .main-grid-container__news_headliner {

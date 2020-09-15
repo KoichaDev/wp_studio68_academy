@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <?php  get_template_part('template-parts/courses page/courses_headliner', '/'); ?>
+<?php  get_template_part('template-parts/courses page/courses_headliner', '/'); ?>
   <main class="grid-course-container__main">
     <div class="grid-course-container__main__video-preview">
         <div class="embed-container">

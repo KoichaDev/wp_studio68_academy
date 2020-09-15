@@ -5,7 +5,8 @@
         <h1>Your Courses</h1>
     </div>
     <h3 
-    class="label-user box box--absolute box--bright-sun">Freelancer
+    class="label-user box box--absolute box--bright-sun">
+    Important
     </h3>
     <span 
     class=
