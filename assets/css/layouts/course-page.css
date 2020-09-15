@@ -142,4 +142,5 @@
 .grid-course-container__main__table-of-contents {
   grid-area: grid-course-container__main__table-of-contents;
   padding: 0 2rem;
+  padding-bottom: 4rem;
 }
