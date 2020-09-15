@@ -23,6 +23,14 @@
     right: 0;
     bottom: 0;
   }
+
+  .main-grid-container__news_headliner > img:nth-child(2) {
+    display: none;
+  }
+
+  .label-user {
+    display: none;
+  }
 }
 
 @media (min-width: 876px) {
@@ -51,14 +59,15 @@
     bottom: 0;
   }
 
-  .label-triangle {
-    width: 2rem;
-    height: 2rem;
-    top: 121%;
-    right: 96%;
+  .main-grid-container__news_headliner > img:nth-child(2) {
+    display: none;
   }
 
   .main-grid-container__news__headline > img:nth-child(2) {
+    display: none;
+  }
+
+  .label-triangle {
     display: none;
   }
 }

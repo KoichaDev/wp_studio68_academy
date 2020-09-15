@@ -10,10 +10,10 @@
   .main-grid-container__news_headliner__box {
     position: absolute;
     width: 91%;
-    height: 6rem;
+    height: 7rem;
     background: #591f93;
     color: #ffffff;
-    bottom: 18%;
+    bottom: 0;
     padding: 1rem 2rem;
   }
 
@@ -33,6 +33,12 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    top: 83%;
+    top: 100%;
+  }
+  .label-triangle {
+    width: 2rem;
+    height: 2rem;
+    top: 121%;
+    right: 95%;
   }
 }

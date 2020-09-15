@@ -27,4 +27,16 @@
   .main-grid-container__news_headliner__box > h1 {
     font-weight: 800;
   }
+
+  .label-user {
+    display: none;
+  }
+
+  .label-triangle {
+    display: none;
+  }
+
+  .main-grid-container__news_headliner > img:nth-child(2) {
+    display: none;
+  }
 }
