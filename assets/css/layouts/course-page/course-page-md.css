@@ -12,8 +12,8 @@
       'course-description'
       'learning-objective'
       'learning-progress'
-      'table-of-contents-header'
       'table-of-contents-skills'
+      'table-of-contents-header'
       'table-of-contents' 'table-of-contents';
   }
 
@@ -39,20 +39,21 @@
   .grid-course-container__main__learning-progress {
     grid-area: learning-progress;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1px 1px;
-    grid-template-areas: 'grid-course-container__main__learning-progress__chartjs grid-course-container__main__learning-progress__description';
+    grid-template-columns: 100%;
+    margin: auto;
+    grid-template-areas:
+      'chart-js'
+      'chart-js-learning-progress';
   }
 
   .grid-course-container__main__learning-progress__chartjs {
-    grid-template: grid-course-container__main__learning-progress__chartjs;
+    grid-template: chart-js;
     margin-top: 4rem;
     margin-left: 4rem;
   }
 
   .grid-course-container__main__learning-progress__description {
-    grid-template: grid-course-container__main__learning-progress__description;
+    grid-template: chart-js-learning-progress;
     margin: 4rem 3rem;
   }
 
@@ -133,7 +134,7 @@
 
   .grid-course-container__main__table-of-contents-skills {
     grid-area: table-of-contents-skills;
-    margin: auto;
+    margin: 1rem;
     padding: 0rem 1rem;
     color: #eed9ca;
     width: 70%;
