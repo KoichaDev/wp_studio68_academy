@@ -4,8 +4,8 @@
         
         // Add featured image
         add_theme_support('post-thumbnails');
-     
     }
+
 
     function s68_academy_course_post_types() {
         // Post type for Courses

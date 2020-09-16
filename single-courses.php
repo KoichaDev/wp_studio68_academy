@@ -14,7 +14,7 @@
         </p>
         <br>
         <br>
-        <a href="#" class="btn btn--yellow btn-hover--purple">Get Started »</a>
+        <a href="<?php echo get_the_permalink() . '?section=preview'; ?>" class="btn btn--yellow btn-hover--purple">Get Started »</a>
     </div>
     <div class="grid-course-container__main__learning-objective">
         <?php the_field('academy_course_objective_learning'); ?>

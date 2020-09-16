@@ -9,6 +9,7 @@
 
   .grid-course-container__course-headline__box > h1 {
     color: #d857d9;
+    font-size: 2rem;
   }
 
   .grid-course-container__course-headline__box {
