@@ -2,8 +2,8 @@
   .grid-course-container__main {
     display: grid;
     background: #141b3a;
-    width: 90%;
-    margin: -4rem 4rem;
+    width: 95%;
+    margin: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-template-rows: 1fr 1fr;
     gap: 1px 1px;
@@ -19,21 +19,24 @@
 
   .grid-course-container__main__video-preview {
     grid-area: video-preview;
-    margin: auto;
+    margin: 0;
+    margin-top: 1rem;
     padding: 1rem 2rem;
   }
 
   .grid-course-container__main__video-description {
     grid-area: course-description;
-    margin: auto;
-    padding: 5rem 1rem;
+    margin: 0;
+    padding: 2.3rem;
     color: #eed9ca;
-    width: 70%;
+    width: 75vw;
+    line-height: 2rem;
   }
 
   .grid-course-container__main__learning-objective {
     grid-area: learning-objective;
     margin-left: 2rem;
+    margin-top: 1rem;
   }
 
   .grid-course-container__main__learning-progress {
@@ -52,7 +55,6 @@
   .grid-course-container__main__learning-progress__description {
     grid-area: chart-js-learning-progress;
     margin: 0 2rem;
-    padding: 1rem;
   }
 
   .grid-course-container__main__learning-progress__description > h2 {
