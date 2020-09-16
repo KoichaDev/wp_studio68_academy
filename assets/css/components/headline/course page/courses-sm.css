@@ -1,9 +1,9 @@
 @media (max-width: 768px) {
   .grid-course-container__course-headline {
     position: relative;
-    margin: 5rem 4rem;
+    margin: 5rem 3rem;
     background: #6301e4;
-    width: 90%;
+    width: 91%;
     height: 93px;
   }
 
@@ -13,17 +13,18 @@
 
   .grid-course-container__course-headline__box {
     position: absolute;
-    width: 25vw;
+    width: 95%;
     height: 5rem;
     background: #141c3a;
     color: #ffffff;
     bottom: 32%;
-    right: 74%;
+    right: 10%;
     padding: 1rem 2rem;
   }
 
   .grid-course-container__course-headline > img {
     position: absolute;
+    display: none;
     top: 40%;
     right: 5%;
     bottom: 0;
