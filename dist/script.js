@@ -22205,6 +22205,12 @@ var TableOfContent = /*#__PURE__*/function () {
       return _this.lectures.length;
     });
 
+    _defineProperty(this, "getCourseDuration", function () {
+      return _this.getCourseDescription().reduce(function (sum, str) {
+        return sum + parseInt(str.match(/\d+/)[0]);
+      }, 0);
+    });
+
     _defineProperty(this, "getCourseDescription", function () {
       var textArray = [];
 
@@ -22226,12 +22232,6 @@ var TableOfContent = /*#__PURE__*/function () {
       return textArray;
     });
 
-    _defineProperty(this, "getCourseDuration", function () {
-      return _this.getCourseDescription().reduce(function (sum, str) {
-        return sum + parseInt(str.match(/\d+/)[0]);
-      }, 0);
-    });
-
     this.tableOfContentDescription = document.querySelector('[data-table-of-content-head-section]');
     this.tables = document.querySelectorAll('[data-table-of-content-course] > table');
     this.lectures = document.querySelectorAll('[data-table-of-content-course] > table > tbody > tr');
@@ -22245,7 +22245,14 @@ var TableOfContent = /*#__PURE__*/function () {
       var sections = this.getSections();
       var lectures = this.getLectures();
       var duration = this.getCourseDuration();
-      this.tableOfContentDescription.textContent = "".concat(sections, " sections \u2022 ").concat(lectures, " lectures \u2022 ").concat(duration, "m total length ");
+
+      if (duration >= 60) {
+        var hours = parseInt(duration / 60);
+        var minutes = (duration / 60).toFixed(2).split('.');
+        this.tableOfContentDescription.textContent = "".concat(sections, " sections \u2022 ").concat(lectures, " lectures \u2022 ").concat(hours, "h ").concat(minutes[1], "m total length ");
+      } else {
+        this.tableOfContentDescription.textContent = "".concat(sections, " sections \u2022 ").concat(lectures, " lectures \u2022 ").concat(duration, "m total length ");
+      }
     }
   }]);
 

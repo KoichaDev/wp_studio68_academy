@@ -11,12 +11,22 @@ export default class TableOfContent {
         const sections = this.getSections();
         const lectures = this.getLectures();
         const duration = this.getCourseDuration();
-        this.tableOfContentDescription.textContent = `${sections} sections • ${lectures} lectures • ${duration}m total length `;
+
+        if (duration >= 60) {
+            const hours = parseInt(duration / 60);
+            const minutes = (duration / 60).toFixed(2).split('.')
+
+            this.tableOfContentDescription.textContent = `${sections} sections • ${lectures} lectures • ${hours}h ${minutes[1]}m total length `;
+        } else {
+            this.tableOfContentDescription.textContent = `${sections} sections • ${lectures} lectures • ${duration}m total length `;
+        }
     }
 
     getSections = () => this.tables.length;
 
     getLectures = () => this.lectures.length;
+
+    getCourseDuration = () => this.getCourseDescription().reduce((sum, str) => sum + parseInt(str.match(/\d+/)[0]), 0)
 
     getCourseDescription = () => {
         const textArray = [];
@@ -27,7 +37,6 @@ export default class TableOfContent {
         return textArray;
     }
 
-    getCourseDuration = () => this.getCourseDescription().reduce((sum, str) => sum + parseInt(str.match(/\d+/)[0]), 0)
 
 
 }
