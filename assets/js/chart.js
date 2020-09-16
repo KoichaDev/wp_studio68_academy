@@ -1,3 +1,5 @@
+import Chart from 'chart.js';
+
 export default class ChartJs {
     constructor() {
         this.ctx = document.getElementById('s68-course-chart').getContext('2d');
