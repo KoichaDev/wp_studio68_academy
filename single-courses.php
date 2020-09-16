@@ -64,7 +64,7 @@
     </div>
     <div class="grid-course-container__main__table-of-contents-header">
         <h1>Table of Content</h1>
-        <p class="box box--width-80 box--electric-violet" style="margin-top: 2rem;">
+        <p class="box box--width-80 box--electric-violet" data-table-of-content-head-section style="margin-top: 2rem;">
             21 sections • 10 lectures • 5h 26m total length
         </p>
     </div>
@@ -78,7 +78,7 @@
             <?php endforeach; ?>
         <?php endif; ?>           
     </div>
-    <div class="grid-course-container__main__table-of-contents">
+    <div class="grid-course-container__main__table-of-contents" data-table-of-content-course>
         <?php the_field('academy_table_of_contents'); ?>
     </div>
   </main>

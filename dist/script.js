@@ -22169,6 +22169,90 @@ var Element = function Element() {
 };
 
 exports.default = Element;
+},{}],"table-of-content.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var TableOfContent = /*#__PURE__*/function () {
+  function TableOfContent() {
+    var _this = this;
+
+    _classCallCheck(this, TableOfContent);
+
+    _defineProperty(this, "getSections", function () {
+      return _this.tables.length;
+    });
+
+    _defineProperty(this, "getLectures", function () {
+      return _this.lectures.length;
+    });
+
+    _defineProperty(this, "getCourseDescription", function () {
+      var textArray = [];
+
+      var _iterator = _createForOfIteratorHelper(_this.courseLength),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var description = _step.value;
+          var text = description.textContent;
+          textArray.push(text);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      return textArray;
+    });
+
+    _defineProperty(this, "getCourseDuration", function () {
+      return _this.getCourseDescription().reduce(function (sum, str) {
+        return sum + parseInt(str.match(/\d+/)[0]);
+      }, 0);
+    });
+
+    this.tableOfContentDescription = document.querySelector('[data-table-of-content-head-section]');
+    this.tables = document.querySelectorAll('[data-table-of-content-course] > table');
+    this.lectures = document.querySelectorAll('[data-table-of-content-course] > table > tbody > tr');
+    this.courseLength = document.querySelectorAll('[data-table-of-content-course] > table > tbody > tr > td > span');
+    this.event();
+  }
+
+  _createClass(TableOfContent, [{
+    key: "event",
+    value: function event() {
+      var sections = this.getSections();
+      var lectures = this.getLectures();
+      var duration = this.getCourseDuration();
+      this.tableOfContentDescription.textContent = "".concat(sections, " sections \u2022 ").concat(lectures, " lectures \u2022 ").concat(duration, "m total length ");
+    }
+  }]);
+
+  return TableOfContent;
+}();
+
+exports.default = TableOfContent;
 },{}],"script.js":[function(require,module,exports) {
 "use strict";
 
@@ -22178,14 +22262,17 @@ var _chart = _interopRequireDefault(require("./chart"));
 
 var _MatchMedia = _interopRequireDefault(require("./Match-media"));
 
+var _tableOfContent = _interopRequireDefault(require("./table-of-content"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
   new _MatchMedia.default();
+  new _tableOfContent.default();
   new _timezone.default();
   new _chart.default();
 });
-},{"./timezone":"timezone.js","./chart":"chart.js","./Match-media":"Match-media.js"}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./timezone":"timezone.js","./chart":"chart.js","./Match-media":"Match-media.js","./table-of-content":"table-of-content.js"}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

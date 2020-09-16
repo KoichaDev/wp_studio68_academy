@@ -117,43 +117,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"Match-media.js":[function(require,module,exports) {
-"use strict";
+})({"course.js":[function(require,module,exports) {
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var Element = function Element() {
-  var _this = this;
-
-  _classCallCheck(this, Element);
-
-  _defineProperty(this, "event", function () {
-    _this.removeClass('(max-width: 876px)', _this.aside);
-  });
-
-  _defineProperty(this, "removeClass", function (mediaWidth, element) {
-    var mql = window.matchMedia(mediaWidth);
-
-    if (mql.matches) {
-      element.remove();
-    }
-  });
-
-  this.main = document.querySelector('.main-grid-container');
-  this.aside = document.querySelector('.main-grid-container > .main-grid-container__aside');
-  this.courseHeadline = document.querySelector('.main-grid-container__course__headline');
-  this.courseHeadlineImage = document.querySelector('.main-grid-container__course__headline > img');
-  this.event();
-};
-
-exports.default = Element;
 },{}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -358,5 +323,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","Match-media.js"], null)
-//# sourceMappingURL=/Match-media.js.map
+},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","course.js"], null)
+//# sourceMappingURL=/course.ec1ce0ff.js.map
