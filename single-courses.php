@@ -8,6 +8,7 @@
         </div>
     </div>
     <div class="grid-course-container__main__video-description">
+        <h1>Description</h1>
         <p>
             <?php the_field('academy_course_description'); ?>
         </p>

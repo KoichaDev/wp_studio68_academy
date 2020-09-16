@@ -26,6 +26,20 @@
     padding: 5rem 1rem;
     color: #eed9ca;
     width: 70%;
+    line-height: 1.5rem;
+  }
+
+  .grid-course-container__main__video-description > h1 {
+    color: #d857d9;
+    padding-bottom: 1rem;
+  }
+
+  .grid-course-container__main__video-description > p {
+    padding-left: 2px;
+  }
+
+  .grid-course-container__main__video-description > a {
+    margin-left: 3px;
   }
 
   .grid-course-container__main__learning-objective {
