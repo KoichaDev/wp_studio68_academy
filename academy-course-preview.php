@@ -1,5 +1,15 @@
+<?php get_header(); ?>
 
 
-<!-- <h1><?php echo get_the_title(); ?></h1>
+<main class="preview-grid-container">
+  <div class="preview-grid__courses">
+    <?php the_field('academy_table_of_contents'); ?>
+  </div>
+  <div class="preview-grid__video-preview">
+    video preview
+  </div>
+</main>
 
-        <?php the_field('academy_table_of_contents'); ?> -->
+
+
+<?php get_footer(); ?>

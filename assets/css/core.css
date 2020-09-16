@@ -43,4 +43,5 @@
  */
 
 @import './layouts/course-page/course-page.core.css';
+@import './layouts/preview-page/preview-page.core.css';
 @import './layouts/home-page.css';

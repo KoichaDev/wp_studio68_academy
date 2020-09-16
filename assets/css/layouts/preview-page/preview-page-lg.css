@@ -1,0 +1,18 @@
+@media (min-width: 1270px) {
+  .preview-grid-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: 'course-selection video-preview';
+  }
+
+  .preview-grid__courses {
+    grid-area: course-selection;
+    background: #141b3a;
+  }
+
+  .preview-grid__video-preview {
+    grid-area: video-preview;
+  }
+}
