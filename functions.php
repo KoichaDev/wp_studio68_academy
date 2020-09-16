@@ -11,5 +11,5 @@ include(get_theme_file_path('/includes/front-end/enqueue.php'));
 add_action('after_setup_theme', 's68_back_enqueue_scripts');
 add_action('wp_enqueue_scripts', 's68_front_enqueue_scripts');
 
-// Action Hooks - Cutom Custome post Types
+// Action Hooks - Custome post Types
 add_action('init', 's68_academy_course_post_types');

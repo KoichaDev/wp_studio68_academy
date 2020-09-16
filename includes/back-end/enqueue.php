@@ -1,11 +1,14 @@
 <?php 
     // This is for back-end use. Basically everything related to Admin dashboard
+    
+    // This is just a general way to organize our WP REST API
+    require get_theme_file_path('includes/back-end/search-route.php');
+    
     function s68_back_enqueue_scripts() {
         
         // Add featured image
         add_theme_support('post-thumbnails');
     }
-
 
     function s68_academy_course_post_types() {
         // Post type for Courses
