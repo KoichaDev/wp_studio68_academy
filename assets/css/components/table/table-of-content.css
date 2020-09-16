@@ -9,4 +9,11 @@
 
 .grid-course-container__main__table-of-contents > table > tbody > tr > td {
   padding: 1rem 0;
+  padding-right: 2rem;
+}
+
+@media (max-width: 992px) {
+  table tbody tr td iframe {
+    margin-top: -3.5rem;
+  }
 }
