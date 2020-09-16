@@ -4,6 +4,7 @@
   overflow: hidden;
   max-width: 100%;
   height: auto;
+  margin: 2rem;
 }
 
 .embed-container iframe,

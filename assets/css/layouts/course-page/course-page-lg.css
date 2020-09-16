@@ -16,7 +16,6 @@
 
   .grid-course-container__main__video-preview {
     grid-area: video-preview;
-    margin: auto;
     padding: 1rem 2rem;
   }
 
@@ -181,7 +180,6 @@
 
   .grid-course-container__main__video-preview {
     grid-area: video-preview;
-    margin: auto;
     padding: 1rem 2rem;
   }
 

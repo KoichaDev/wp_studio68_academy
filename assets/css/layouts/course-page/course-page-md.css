@@ -19,7 +19,6 @@
 
   .grid-course-container__main__video-preview {
     grid-area: video-preview;
-    margin: auto;
     margin-top: 2rem;
     padding: 1rem 2rem;
   }
