@@ -90,6 +90,7 @@
                             <h2><?php echo $row['academy_course_section']; ?> </h2>
                             <hr>
                             <li>
+                                <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
                                 <img 
                                 src="<?php echo $row['academy_course_image']['url']; ?>" 
                                 alt="<?php echo $row['academy_course_image']['alt']; ?>"
@@ -104,11 +105,13 @@
                                 </h3>
                                 <p><?php echo $row['academy_course_lecture_description']; ?></p>
                             </div>
+                            </a>
                         </li>
                         <?php
                     } else {
                          ?>
                         <li>
+                            <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
                             <h3>
                                 <?php echo $row['academy_course_title']; ?>
                                 <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
@@ -117,6 +120,7 @@
                         <li>
                             <p><?php echo $row['academy_course_lecture_description']; ?></p>
                         </li>
+                        </a>
                         <?php
                     }
                     ?>
@@ -124,6 +128,7 @@
                         } else {
                               ?>
                               <li>
+                                <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
                                 <img 
                                 src="<?php echo $row['academy_course_image']['url']; ?>" 
                                 alt="<?php echo $row['academy_course_image']['alt']; ?>"
@@ -138,11 +143,13 @@
                                 </h3>
                                 <p><?php echo $row['academy_course_lecture_description']; ?></p>
                             </div>
+                            </a>
                         </li>
                         <?php
                     } else {
                          ?>
                         <li>
+                            <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
                             <h3>
                                 <?php echo $row['academy_course_title']; ?>
                                 <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
@@ -151,6 +158,7 @@
                         <li>
                             <p><?php echo $row['academy_course_lecture_description']; ?></p>
                         </li>
+                        </a>
                         <?php
                     }
                     ?>
