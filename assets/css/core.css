@@ -35,7 +35,7 @@
 @import './components/navbar/nav.css';
 @import './components/preview/preview.css';
 @import './components/shape/shape.css';
-@import './components/table/table-of-content.css';
+@import './components/table/table-of-content.core.css';
 
 /* LAYOUTS 
  * Unique combinations of components and base styles are imported here
