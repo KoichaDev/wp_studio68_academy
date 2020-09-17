@@ -3,7 +3,7 @@
     display: grid;
     background: #141b3a;
     width: 95%;
-    margin: 1.3rem;
+    margin: 1rem;
     margin-top: -4rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-template-rows: 1fr 1fr;
