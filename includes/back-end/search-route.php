@@ -17,13 +17,26 @@ function s68_course($data) {
 
     $course_api = [];
 
+
     while($course -> have_posts()) {
         $course -> the_post();
-
         array_push($course_api, [
-            'title' => get_the_title()
+            'title' => get_the_title(),
+            'permalink' => get_the_permalink(),
+            'youtube' => [getCourseURL()]
         ]);
     }
 
     return $course_api;
+}
+
+function getCourseURL() {
+    $array_url = [];
+    $rows = get_field('academy_course_content');
+    if( $rows ) {
+        foreach( $rows as $row ) {
+            array_push($array_url, $row['academy_course_url']); 
+        }
+    }
+    return $array_url;
 }
