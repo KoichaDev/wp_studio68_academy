@@ -9,6 +9,15 @@
   color: #ffc740;
 }
 
+.table-of-content-container hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #cc4773;
+  margin-top: 1rem;
+  padding: 0;
+}
+
 .table-of-content-container > ul li .table-of-content-container__information {
   position: absolute;
   top: 25%;
