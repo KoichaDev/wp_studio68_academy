@@ -23,7 +23,9 @@ function s68_course($data) {
         array_push($course_api, [
             'title' => get_the_title(),
             'permalink' => get_the_permalink(),
-            'youtube' => [getCourseURL()]
+            'youtube' => [
+                'url' => getCourseURL()
+            ]
         ]);
     }
 
