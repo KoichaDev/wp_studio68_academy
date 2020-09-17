@@ -49,6 +49,7 @@
 
 .table-of-content-container__information p {
   color: #eed9ca;
+  line-height: 1.5rem;
 }
 
 .grid-table-of-content-container ul li {
