@@ -1,9 +1,9 @@
 export default class TableOfContent {
     constructor() {
         this.tableOfContentDescription = document.querySelector('[data-table-of-content-head-section]')
-        this.tables = document.querySelectorAll('[data-table-of-content-course] > table');
-        this.lectures = document.querySelectorAll('[data-table-of-content-course] > table > tbody > tr');
-        this.courseLength = document.querySelectorAll('[data-table-of-content-course] > table > tbody > tr > td > span');
+        this.tables = document.querySelectorAll('[data-table-of-content] > ul h2');
+        this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
+        this.courseLength = document.querySelectorAll('[data-duration] h3 small');
         this.event();
     }
 

@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"Match-media.js":[function(require,module,exports) {
+})({"table-of-content.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -125,35 +125,89 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Element = function Element() {
-  var _this = this;
+var TableOfContent = /*#__PURE__*/function () {
+  function TableOfContent() {
+    var _this = this;
 
-  _classCallCheck(this, Element);
+    _classCallCheck(this, TableOfContent);
 
-  _defineProperty(this, "event", function () {
-    _this.removeClass('(max-width: 876px)', _this.aside);
-  });
+    _defineProperty(this, "getSections", function () {
+      return _this.tables.length;
+    });
 
-  _defineProperty(this, "removeClass", function (mediaWidth, element) {
-    var mql = window.matchMedia(mediaWidth);
+    _defineProperty(this, "getLectures", function () {
+      return _this.lectures.length;
+    });
 
-    if (mql.matches) {
-      element.remove();
+    _defineProperty(this, "getCourseDuration", function () {
+      return _this.getCourseDescription().reduce(function (sum, str) {
+        return sum + parseInt(str.match(/\d+/)[0]);
+      }, 0);
+    });
+
+    _defineProperty(this, "getCourseDescription", function () {
+      var textArray = [];
+
+      var _iterator = _createForOfIteratorHelper(_this.courseLength),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var description = _step.value;
+          var text = description.textContent;
+          textArray.push(text);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      return textArray;
+    });
+
+    this.tableOfContentDescription = document.querySelector('[data-table-of-content-head-section]');
+    this.tables = document.querySelectorAll('[data-table-of-content] > ul h2');
+    this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
+    this.courseLength = document.querySelectorAll('[data-duration] h3 small');
+    this.event();
+  }
+
+  _createClass(TableOfContent, [{
+    key: "event",
+    value: function event() {
+      var sections = this.getSections();
+      var lectures = this.getLectures();
+      var duration = this.getCourseDuration();
+
+      if (duration >= 60) {
+        var hours = parseInt(duration / 60);
+        var minutes = (duration / 60).toFixed(2).split('.');
+        this.tableOfContentDescription.textContent = "".concat(sections, " sections \u2022 ").concat(lectures, " lectures \u2022 ").concat(hours, "h ").concat(minutes[1], "m total length ");
+      } else {
+        this.tableOfContentDescription.textContent = "".concat(sections, " sections \u2022 ").concat(lectures, " lectures \u2022 ").concat(duration, "m total length ");
+      }
     }
-  });
+  }]);
 
-  this.main = document.querySelector('.main-grid-container');
-  this.aside = document.querySelector('.main-grid-container > .main-grid-container__aside');
-  this.courseHeadline = document.querySelector('.main-grid-container__course__headline');
-  this.courseHeadlineImage = document.querySelector('.main-grid-container__course__headline > img');
-  this.event();
-};
+  return TableOfContent;
+}();
 
-exports.default = Element;
+exports.default = TableOfContent;
 },{}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -358,5 +412,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","Match-media.js"], null)
-//# sourceMappingURL=/Match-media.js.map
+},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","table-of-content.js"], null)
+//# sourceMappingURL=/table-of-content.js.map

@@ -79,7 +79,7 @@
         <?php endif; ?>           
     </div>
     <div class="grid-course-container__main__table-of-contents" data-table-of-content-course>
-        <div class="table-of-content-container">
+        <div class="table-of-content-container" data-table-of-content>
         <?php 
             $rows = get_field('academy_course_content');
             if( $rows ) {
@@ -97,7 +97,7 @@
                                 height="100"
                                 >
                         <?php if($row['academy_course_section'] !== '') { ?>
-                            <div class="table-of-content-container__information">
+                            <div class="table-of-content-container__information" data-duration>
                                 <h3>
                                     <?php echo $row['academy_course_title']; ?>
                                     <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
@@ -131,7 +131,7 @@
                                 height="100"
                                 >
                             <?php if($row['academy_course_section'] == '') { ?>
-                            <div class="table-of-content-container__information">
+                            <div class="table-of-content-container__information" data-duration>
                                 <h3>
                                     <?php echo $row['academy_course_title']; ?>
                                     <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
