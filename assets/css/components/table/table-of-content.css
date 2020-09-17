@@ -56,14 +56,6 @@
   list-style: none;
 }
 
-.grid-table-of-content-container__image {
-  grid-area: course-image;
-}
-
-.grid-table-of-content-container__description {
-  grid-area: course-description;
-}
-
 .grid-table-of-content-container__image > ul {
   list-style: none;
 }
