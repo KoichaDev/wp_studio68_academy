@@ -79,27 +79,47 @@
         <?php endif; ?>           
     </div>
     <div class="grid-course-container__main__table-of-contents" data-table-of-content-course>
-        <div class="grid-table-of-content-container">
-          <?php 
-           $rows = get_field('academy_course_content');
-            if($rows) { ?>
-                <div class="grid-table-of-content-container__image">
-                    <ul>
-                    <?php
-                    foreach($rows as $row ) {
-                        if($row['academy_course_section'] !== '') { 
+        <div class="table-of-content-container">
+        <?php 
+            $rows = get_field('academy_course_content');
+            if( $rows ) {
+                echo '<ul>';
+                foreach( $rows as $row ) {
+                    if($row['academy_course_section'] !== '') { 
                             ?>
-                            <li>
-                                <h2><?php echo $row['academy_course_section']; ?> </h2>
-                            </li>
+                            <h2><?php echo $row['academy_course_section']; ?> </h2>
+                            <hr>
                             <li>
                                 <img 
                                 src="<?php echo $row['academy_course_image']['url']; ?>" 
                                 alt="<?php echo $row['academy_course_image']['alt']; ?>"
                                 width="169"
-                                height="89"
+                                height="100"
                                 >
-                            </li>
+                        <?php if($row['academy_course_section'] !== '') { ?>
+                            <div class="table-of-content-container__information">
+                                <h3>
+                                    <?php echo $row['academy_course_title']; ?>
+                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                </h3>
+                                <p><?php echo $row['academy_course_lecture_description']; ?></p>
+                            </div>
+                        </li>
+                        <?php
+                    } else {
+                         ?>
+                        <li>
+                            <h3>
+                                <?php echo $row['academy_course_title']; ?>
+                                <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                            </h3>
+                        </li>
+                        <li>
+                            <p><?php echo $row['academy_course_lecture_description']; ?></p>
+                        </li>
+                        <?php
+                    }
+                    ?>
                             <?php
                         } else {
                               ?>
@@ -108,31 +128,16 @@
                                 src="<?php echo $row['academy_course_image']['url']; ?>" 
                                 alt="<?php echo $row['academy_course_image']['alt']; ?>"
                                 width="169"
-                                height="89"
+                                height="100"
                                 >
-                            </li>
-                            <?php
-                        }
-                } ?>
-                    </ul>;
-                </div>
-                
-                <div class="grid-table-of-content-container__description">
-                    <ul>
-                <?php
-                foreach( $rows as $row ) {
-                    if($row['academy_course_section'] !== '') {
-                        ?>
-                        <li>
-                            <h3>
-                                <?php echo $row['academy_course_title']; ?>
-                            </h3>
-                            <p>
-                                <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
-                            </p>
-                        </li>
-                        <li>
-                            <p><?php echo $row['academy_course_lecture_description']; ?></p>
+                            <?php if($row['academy_course_section'] == '') { ?>
+                            <div class="table-of-content-container__information">
+                                <h3>
+                                    <?php echo $row['academy_course_title']; ?>
+                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                </h3>
+                                <p><?php echo $row['academy_course_lecture_description']; ?></p>
+                            </div>
                         </li>
                         <?php
                     } else {
@@ -140,10 +145,8 @@
                         <li>
                             <h3>
                                 <?php echo $row['academy_course_title']; ?>
-                            </h3>
-                            <p>
                                 <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
-                            </p>
+                            </h3>
                         </li>
                         <li>
                             <p><?php echo $row['academy_course_lecture_description']; ?></p>
@@ -151,16 +154,19 @@
                         <?php
                     }
                     ?>
-                <?php
+                            </li>
+                            <?php
+                        }
+                }
+                echo '</ul>';
+                ?>
+            </div>;<!-- End Div grid -->
+            <?php
             }
-            ?>
-            </ul>
-                </div>;
-                <?php
-            }
-        ?> 
+        ?>  
         </div>
     </div>
   </main>
 
 <?php get_footer(); ?>
+

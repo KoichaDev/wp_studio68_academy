@@ -18,12 +18,41 @@
   }
 }
 
-.grid-table-of-content-container {
-  display: grid;
-  grid-template-columns: 0.4fr 1.6fr;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: 'course-image course-description';
+.table-of-content-container > ul li {
+  position: relative;
+  list-style: none;
+  padding-top: 2rem;
+}
+
+.table-of-content-container > ul h2 {
+  padding: 1.25rem 0;
+  color: #ffc740;
+}
+
+.table-of-content-container > ul li .table-of-content-container__information {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}
+
+.table-of-content-container__information h3 {
+  display: inline-block;
+  color: #ffc740;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.table-of-content-container__information h3 small {
+  display: inline-block;
+  color: #ffc740;
+}
+
+.table-of-content-container__information p {
+  color: #eed9ca;
+}
+
+.grid-table-of-content-container ul li {
+  list-style: none;
 }
 
 .grid-table-of-content-container__image {
