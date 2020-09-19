@@ -21,14 +21,24 @@
     display: inline-block;
   }
 
-  .preview-grid__courses > ul > div p {
-    display: inline-block;
+  [data-set-course-section] {
     font-weight: bold;
     color: #eed9ca;
   }
 
   .preview-grid__courses > ul > h1 {
     display: inline-block;
+    color: #ffc740;
+    margin-left: 1rem;
+  }
+
+  .preview-grid__courses > ul > hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ffffff;
+    margin: 1rem 0;
+    padding: 0;
   }
 
   .preview-grid__video-preview {
