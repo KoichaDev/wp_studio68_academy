@@ -145,6 +145,11 @@ var TableOfContent = /*#__PURE__*/function () {
 
     _classCallCheck(this, TableOfContent);
 
+    _defineProperty(this, "appendElement", function (parentElement, childElement) {
+      var element = document.createElement(childElement);
+      element.textContent = 'yo'; // parentElement.appendChild(childElement);
+    });
+
     _defineProperty(this, "getSections", function () {
       return _this.tables.length;
     });
@@ -180,16 +185,37 @@ var TableOfContent = /*#__PURE__*/function () {
       return textArray;
     });
 
+    // academy-course-preview.php variables 
     this.tableOfContentDescription = document.querySelector('[data-table-of-content-head-section]');
     this.tables = document.querySelectorAll('[data-table-of-content] > ul h2');
     this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
-    this.courseLength = document.querySelectorAll('[data-duration] h3 small');
+    this.courseLength = document.querySelectorAll('[data-duration] h3 small'); // academy-course-specific-preview.php variables
+
+    this.countSection = document.querySelectorAll('[data-unordered-list] > h2');
     this.event();
   }
 
   _createClass(TableOfContent, [{
     key: "event",
     value: function event() {
+      var increment = 1;
+
+      var _iterator2 = _createForOfIteratorHelper(this.countSection),
+          _step2;
+
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var h2 = _step2.value;
+          var h1 = document.createElement('h1');
+          h1.textContent = increment++;
+          h2.parentNode.insertBefore(h1, h2);
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+
       var sections = this.getSections();
       var lectures = this.getLectures();
       var duration = this.getCourseDuration();

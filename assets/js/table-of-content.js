@@ -1,13 +1,24 @@
 export default class TableOfContent {
     constructor() {
+        // academy-course-preview.php variables 
         this.tableOfContentDescription = document.querySelector('[data-table-of-content-head-section]')
         this.tables = document.querySelectorAll('[data-table-of-content] > ul h2');
         this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
         this.courseLength = document.querySelectorAll('[data-duration] h3 small');
+
+        // academy-course-specific-preview.php variables
+        this.countSection = document.querySelectorAll('[data-unordered-list] > h2');
         this.event();
     }
 
     event() {
+        let increment = 1;
+        for (const h2 of this.countSection) {
+            const h1 = document.createElement('h1');
+            h1.textContent = increment++;
+            h2.parentNode.insertBefore(h1, h2);
+        }
+
         const sections = this.getSections();
         const lectures = this.getLectures();
         const duration = this.getCourseDuration();
@@ -20,6 +31,12 @@ export default class TableOfContent {
         } else {
             this.tableOfContentDescription.textContent = `${sections} sections • ${lectures} lectures • ${duration}m total length `;
         }
+    }
+
+    appendElement = (parentElement, childElement) => {
+        const element = document.createElement(childElement);
+        element.textContent = 'yo';
+        // parentElement.appendChild(childElement);
     }
 
     getSections = () => this.tables.length;

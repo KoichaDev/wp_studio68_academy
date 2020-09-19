@@ -6,7 +6,7 @@
      <?php 
             $rows = get_field('academy_course_content');
             if( $rows ) {
-                echo '<ul>';
+                echo '<ul data-unordered-list>';
                 foreach( $rows as $row ) {
                     if($row['academy_course_section'] !== '') { 
                             ?>
