@@ -204,7 +204,7 @@ var TableOfContent = /*#__PURE__*/function () {
           var p = document.createElement('p');
           var div = document.createElement('div');
           p.textContent = increment++;
-          div.setAttribute('class', 'circle circle--no-bg');
+          div.setAttribute('class', 'circle circle--br-almond');
           h1.parentNode.insertBefore(div, h1);
           div.appendChild(p);
         }

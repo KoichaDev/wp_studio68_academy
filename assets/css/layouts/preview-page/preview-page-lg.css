@@ -10,6 +10,25 @@
   .preview-grid__courses {
     grid-area: course-selection;
     background: #141b3a;
+    padding: 1rem 2rem;
+  }
+
+  .preview-grid__courses > ul {
+    list-style: none;
+  }
+
+  .preview-grid__courses > ul > div {
+    display: inline-block;
+  }
+
+  .preview-grid__courses > ul > div p {
+    display: inline-block;
+    font-weight: bold;
+    color: #eed9ca;
+  }
+
+  .preview-grid__courses > ul > h1 {
+    display: inline-block;
   }
 
   .preview-grid__video-preview {
