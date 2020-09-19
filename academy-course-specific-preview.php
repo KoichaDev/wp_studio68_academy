@@ -10,7 +10,7 @@
                 foreach( $rows as $row ) {
                     if($row['academy_course_section'] !== '') { 
                             ?>
-                            <h2><?php echo $row['academy_course_section']; ?> </h2>
+                            <h1><?php echo $row['academy_course_section']; ?> </h1>
                             <hr>
                             <li>
                                 <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 

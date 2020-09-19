@@ -22238,7 +22238,7 @@ var TableOfContent = /*#__PURE__*/function () {
     this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
     this.courseLength = document.querySelectorAll('[data-duration] h3 small'); // academy-course-specific-preview.php variables
 
-    this.countSection = document.querySelectorAll('[data-unordered-list] > h2');
+    this.countSection = document.querySelectorAll('[data-unordered-list] > h1');
     this.event();
   }
 
@@ -22252,13 +22252,13 @@ var TableOfContent = /*#__PURE__*/function () {
 
       try {
         for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-          var h2 = _step2.value;
-          var h1 = document.createElement('h1');
+          var h1 = _step2.value;
+          var p = document.createElement('p');
           var div = document.createElement('div');
-          h1.textContent = increment++;
-          div.setAttribute('class', 'circle');
-          h2.parentNode.insertBefore(div, h2);
-          div.appendChild(h1);
+          p.textContent = increment++;
+          div.setAttribute('class', 'circle circle--no-bg');
+          h1.parentNode.insertBefore(div, h1);
+          div.appendChild(p);
         }
       } catch (err) {
         _iterator2.e(err);

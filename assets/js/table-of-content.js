@@ -7,21 +7,21 @@ export default class TableOfContent {
         this.courseLength = document.querySelectorAll('[data-duration] h3 small');
 
         // academy-course-specific-preview.php variables
-        this.countSection = document.querySelectorAll('[data-unordered-list] > h2');
+        this.countSection = document.querySelectorAll('[data-unordered-list] > h1');
         this.event();
     }
 
     event() {
         let increment = 1;
-        for (const h2 of this.countSection) {
-            const h1 = document.createElement('h1');
+        for (const h1 of this.countSection) {
+            const p = document.createElement('p');
             const div = document.createElement('div');
 
-            h1.textContent = increment++;
-            div.setAttribute('class', 'circle');
+            p.textContent = increment++;
+            div.setAttribute('class', 'circle circle--no-bg');
 
-            h2.parentNode.insertBefore(div, h2);
-            div.appendChild(h1)
+            h1.parentNode.insertBefore(div, h1);
+            div.appendChild(p)
         }
 
         const sections = this.getSections();
