@@ -186,7 +186,7 @@ var TableOfContent = /*#__PURE__*/function () {
     this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
     this.courseLength = document.querySelectorAll('[data-duration] h3 small'); // academy-course-specific-preview.php variables
 
-    this.countSection = document.querySelectorAll('[data-unordered-list] > h1');
+    this.countSection = document.querySelectorAll('[data-set-course-section]');
     this.event();
   }
 
@@ -200,12 +200,9 @@ var TableOfContent = /*#__PURE__*/function () {
 
       try {
         for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-          var h1 = _step2.value;
+          var div = _step2.value;
           var p = document.createElement('p');
-          var div = document.createElement('div');
           p.textContent = increment++;
-          div.setAttribute('class', 'circle circle--br-almond');
-          h1.parentNode.insertBefore(div, h1);
           div.appendChild(p);
         }
       } catch (err) {
