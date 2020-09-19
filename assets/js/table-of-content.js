@@ -15,8 +15,13 @@ export default class TableOfContent {
         let increment = 1;
         for (const h2 of this.countSection) {
             const h1 = document.createElement('h1');
+            const div = document.createElement('div');
+
             h1.textContent = increment++;
-            h2.parentNode.insertBefore(h1, h2);
+            div.setAttribute('class', 'circle');
+
+            h2.parentNode.insertBefore(div, h2);
+            div.appendChild(h1)
         }
 
         const sections = this.getSections();
@@ -33,11 +38,7 @@ export default class TableOfContent {
         }
     }
 
-    appendElement = (parentElement, childElement) => {
-        const element = document.createElement(childElement);
-        element.textContent = 'yo';
-        // parentElement.appendChild(childElement);
-    }
+
 
     getSections = () => this.tables.length;
 

@@ -22197,11 +22197,6 @@ var TableOfContent = /*#__PURE__*/function () {
 
     _classCallCheck(this, TableOfContent);
 
-    _defineProperty(this, "appendElement", function (parentElement, childElement) {
-      var element = document.createElement(childElement);
-      element.textContent = 'yo'; // parentElement.appendChild(childElement);
-    });
-
     _defineProperty(this, "getSections", function () {
       return _this.tables.length;
     });
@@ -22259,8 +22254,11 @@ var TableOfContent = /*#__PURE__*/function () {
         for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
           var h2 = _step2.value;
           var h1 = document.createElement('h1');
+          var div = document.createElement('div');
           h1.textContent = increment++;
-          h2.parentNode.insertBefore(h1, h2);
+          div.setAttribute('class', 'circle');
+          h2.parentNode.insertBefore(div, h2);
+          div.appendChild(h1);
         }
       } catch (err) {
         _iterator2.e(err);
