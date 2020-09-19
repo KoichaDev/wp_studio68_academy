@@ -36,6 +36,7 @@
 
   [data-unordered-list] > li ul > li:nth-child(2) {
     margin-left: 1rem;
+    color: #eed9ca;
   }
 
   .preview-grid__courses > ul > h1 {
