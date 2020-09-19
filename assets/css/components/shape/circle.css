@@ -1,6 +1,6 @@
 .circle {
-  width: calc(1rem + 1vw);
-  line-height: calc(1rem + 1vh);
+  width: calc(1.2rem + 1vw);
+  line-height: calc(1.2rem + 1vh);
   border-radius: 50%;
   text-align: center;
   border: 3px solid #000;
