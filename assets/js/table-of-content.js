@@ -8,10 +8,12 @@ export default class TableOfContent {
 
         // academy-course-specific-preview.php variables
         this.countSection = document.querySelectorAll('[data-set-course-section]');
+        this.courseLengthPreview = document.querySelectorAll('[data-get-duration]');
         this.event();
     }
 
     event() {
+
         let increment = 1;
         for (const div of this.countSection) {
             const p = document.createElement('p');

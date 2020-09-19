@@ -45,6 +45,16 @@
     font-weight: normal;
   }
 
+  .data-unordered-list__li-duration img {
+    display: inline-block;
+    width: 1rem;
+    margin-left: calc(1rem + 2vw);
+  }
+
+  .data-unordered-list__li-duration p {
+    display: inline-block;
+  }
+
   .preview-grid__courses > ul > hr {
     display: block;
     height: 1px;

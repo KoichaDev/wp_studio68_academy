@@ -20,6 +20,10 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="data-unordered-list__li-duration">
+                                <img src="<?php echo get_theme_file_uri() . './assets/img/iconmonstr-time-2.svg' ?>" alt="clock">
+                                <p data-get-duration>clock</p>
+                            </li>
                             <hr>
                             <li>
                                 <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 

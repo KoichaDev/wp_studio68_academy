@@ -22239,6 +22239,7 @@ var TableOfContent = /*#__PURE__*/function () {
     this.courseLength = document.querySelectorAll('[data-duration] h3 small'); // academy-course-specific-preview.php variables
 
     this.countSection = document.querySelectorAll('[data-set-course-section]');
+    this.courseLengthPreview = document.querySelectorAll('[data-get-duration]');
     this.event();
   }
 
