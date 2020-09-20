@@ -30,20 +30,26 @@
 
   [data-unordered-list] > li ul {
     display: flex;
+    margin-left: 10px;
     list-style: none;
   }
   [data-unordered-list] > li ul > li:nth-child(1) {
-    margin-top: 8px;
+    margin-top: -8px;
   }
 
   [data-unordered-list] > li ul > li:nth-child(2) {
-    margin-top: -5px;
+    margin-top: -1rem;
     margin-left: 7px;
     color: #ffc740;
     font-weight: normal;
   }
+  [data-unordered-list] > li ul > li:nth-child(1) p {
+    font-size: calc(1px + 1vw);
+    font-weight: normal;
+  }
+
   [data-unordered-list] > li ul > li:nth-child(2) h1 {
-    font-size: 2.7rem;
+    font-size: 2rem;
     font-weight: normal;
   }
 
@@ -64,6 +70,10 @@
     border-top: 1px solid #ffffff;
     margin: 1rem 0;
     padding: 0;
+  }
+
+  .data-unordered-list__ul {
+    justify-content: space-between;
   }
 
   .preview-grid__video-preview {

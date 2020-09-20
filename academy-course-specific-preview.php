@@ -24,27 +24,41 @@
                                 <img src="<?php echo get_theme_file_uri() . './assets/img/iconmonstr-time-2.svg' ?>" alt="clock">
                                 <p data-get-duration>clock</p>
                             </li>
-                            <hr>
+                           
                             <li>
                                 <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
                         <?php if($row['academy_course_section'] !== '') { ?>
-                            <div class="table-of-content-container__information" data-duration>
-                                <h3>
-                                    <?php echo $row['academy_course_title']; ?>
+                            <ul class="data-unordered-list__ul">
+                                <li>
+                                    <div class="table-of-content-container__information" data-duration>
+                                        <h3>
+                                        <?php echo $row['academy_course_title']; ?>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li>
                                     <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
-                                </h3>
-                            </div>
+                                </li>
+                            </ul>
                             </a>
                         </li>
+                      
                         <?php
                     } else {
                          ?>
                         <li>
                             <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
-                            <h3>
-                                <?php echo $row['academy_course_title']; ?>
-                                <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
-                            </h3>
+                            <ul>
+                                <li>
+                                    <h3>
+                                    <?php echo $row['academy_course_title']; ?>
+                                    </h3>
+
+                                </li>
+                                <li>
+                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                </li>
+                            </ul>                            
                         </li>
                         </a>
                         <?php
@@ -55,24 +69,37 @@
                               ?>
                               <li>
                                 <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
-                               
-                            <?php if($row['academy_course_section'] == '') { ?>
-                            <div class="table-of-content-container__information" data-duration>
-                                <h3>
-                                    <?php echo $row['academy_course_title']; ?>
+                                    <?php if($row['academy_course_section'] == '') { ?>
+                                <ul class="data-unordered-list__ul">
+                                    <li>
+                                        <div class="table-of-content-container__information" data-duration>
+                                            <h3><?php echo $row['academy_course_title']; ?></h3>
+                                          </div>
+                                    </li>
+                                    <li>
                                     <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
-                                </h3>
-                            </div>
+
+                                    </li>
+                                </ul>   
                             </a>
                         </li>
+                           <hr>
                         <?php
                     } else {
                          ?>
                         <li>
                             <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
+                            <ul class="data-unordered-list__ul">
+                                <li>
+                                    <h3>
+                                        <?php echo $row['academy_course_title']; ?>
+                                    </h3>
+                                </li>
+                                <li>
+                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                </li>
+                            </ul>
                             <h3>
-                                <?php echo $row['academy_course_title']; ?>
-                                <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
                             </h3>
                         </li>
                         </a>
