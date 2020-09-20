@@ -11,7 +11,7 @@
                     if($row['academy_course_section'] !== '') { 
                             ?>
                             <li>
-                                <ul>
+                                <ul style="margin-top: 2rem;">
                                     <li>
                                         <div class="circle circle--br-almond" data-set-course-section></div>
                                     </li>
@@ -31,13 +31,15 @@
                             <ul class="data-unordered-list__ul">
                                 <li>
                                     <div class="table-of-content-container__information" data-duration>
-                                        <h3>
+                                        <p>
                                         <?php echo $row['academy_course_title']; ?>
-                                        </h3>
+                                        </p>
                                     </div>
                                 </li>
                                 <li>
-                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                    <p>
+                                        <small><?php echo $row['academy_course_duration']; ?> min</small>
+                                    </p>
                                 </li>
                             </ul>
                             </a>
@@ -48,15 +50,17 @@
                          ?>
                         <li>
                             <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
-                            <ul>
+                            <ul style="margin-top: 2rem;">
                                 <li>
-                                    <h3>
+                                    <p>
                                     <?php echo $row['academy_course_title']; ?>
-                                    </h3>
+                                    </p>
 
                                 </li>
                                 <li>
-                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                    <p>
+                                        <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                    </p>
                                 </li>
                             </ul>                            
                         </li>
@@ -73,12 +77,13 @@
                                 <ul class="data-unordered-list__ul">
                                     <li>
                                         <div class="table-of-content-container__information" data-duration>
-                                            <h3><?php echo $row['academy_course_title']; ?></h3>
+                                            <p><?php echo $row['academy_course_title']; ?></p>
                                           </div>
                                     </li>
                                     <li>
-                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
-
+                                        <p>
+                                            <small><?php echo $row['academy_course_duration']; ?> min</small>
+                                        </p>
                                     </li>
                                 </ul>   
                             </a>
@@ -91,16 +96,18 @@
                             <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
                             <ul class="data-unordered-list__ul">
                                 <li>
-                                    <h3>
+                                    <p>
                                         <?php echo $row['academy_course_title']; ?>
-                                    </h3>
+                                    </p>
                                 </li>
                                 <li>
-                                    <small>(<?php echo $row['academy_course_duration']; ?> min) </small>
+                                    <p>
+                                        <small><?php echo $row['academy_course_duration']; ?> min</small>
+                                    </p>
                                 </li>
                             </ul>
-                            <h3>
-                            </h3>
+                            <p>
+                            </p>
                         </li>
                         </a>
                         <?php
