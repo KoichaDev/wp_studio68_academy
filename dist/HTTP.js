@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"Match-media.js":[function(require,module,exports) {
+})({"HTTP.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -125,35 +125,186 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-var Element = function Element() {
-  var _this = this;
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-  _classCallCheck(this, Element);
+var HTTP = /*#__PURE__*/function () {
+  function HTTP() {
+    _classCallCheck(this, HTTP);
+  }
 
-  _defineProperty(this, "event", function () {
-    _this.removeClass('(max-width: 876px)', _this.aside);
-  });
+  _createClass(HTTP, [{
+    key: "get",
+    // Make an HTTP GET Request
+    value: function () {
+      var _get = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url) {
+        var res;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return fetch(url);
 
-  _defineProperty(this, "removeClass", function (mediaWidth, element) {
-    var mql = window.matchMedia(mediaWidth);
+              case 2:
+                res = _context.sent;
+                return _context.abrupt("return", res.json());
 
-    if (mql.matches) {
-      element.remove();
-    }
-  });
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
 
-  this.main = document.querySelector('.main-grid-container');
-  this.aside = document.querySelector('.main-grid-container > .main-grid-container__aside');
-  this.courseHeadline = document.querySelector('.main-grid-container__course__headline');
-  this.courseHeadlineImage = document.querySelector('.main-grid-container__course__headline > img');
-  this.event();
-};
+      function get(_x) {
+        return _get.apply(this, arguments);
+      }
 
-exports.default = Element;
+      return get;
+    }() // Make an HTTP Post Request
+
+  }, {
+    key: "post",
+    value: function () {
+      var _post = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, data) {
+        var response;
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return fetch(url, {
+                  method: 'POST',
+                  headers: {
+                    'Content-type': 'application/json',
+                    'X-WP-Nonce': s68_api_data.nonce
+                  },
+                  credentials: 'same-origin',
+                  body: JSON.stringify(data)
+                });
+
+              case 2:
+                response = _context2.sent;
+                _context2.next = 5;
+                return response.json();
+
+              case 5:
+                return _context2.abrupt("return", _context2.sent);
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function post(_x2, _x3) {
+        return _post.apply(this, arguments);
+      }
+
+      return post;
+    }() // Make an HTTP Update Request
+
+  }, {
+    key: "update",
+    value: function () {
+      var _update = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(url, data) {
+        var response;
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.next = 2;
+                return fetch(url, {
+                  method: 'PUT',
+                  headers: {
+                    'Content-type': 'application/json',
+                    'X-WP-Nonce': s68_api_data.nonce
+                  },
+                  credentials: 'same-origin',
+                  body: JSON.stringify(data)
+                });
+
+              case 2:
+                response = _context3.sent;
+                _context3.next = 5;
+                return response.json();
+
+              case 5:
+                return _context3.abrupt("return", _context3.sent);
+
+              case 6:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      function update(_x4, _x5) {
+        return _update.apply(this, arguments);
+      }
+
+      return update;
+    }() // Make an HTTP DELETE Request
+
+  }, {
+    key: "delete",
+    value: function () {
+      var _delete2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(url) {
+        var response;
+        return regeneratorRuntime.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                _context4.next = 2;
+                return fetch(url, {
+                  method: 'DELETE',
+                  headers: {
+                    'Content-type': 'application/json',
+                    'X-WP-Nonce': s68_api_data.nonce
+                  },
+                  credentials: 'same-origin'
+                });
+
+              case 2:
+                response = _context4.sent;
+                _context4.next = 5;
+                return response.json();
+
+              case 5:
+                return _context4.abrupt("return", _context4.sent);
+
+              case 6:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }));
+
+      function _delete(_x6) {
+        return _delete2.apply(this, arguments);
+      }
+
+      return _delete;
+    }()
+  }]);
+
+  return HTTP;
+}();
+
+exports.default = HTTP;
 },{}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -358,5 +509,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","Match-media.js"], null)
-//# sourceMappingURL=/Match-media.js.map
+},{}]},{},["../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","HTTP.js"], null)
+//# sourceMappingURL=/HTTP.js.map

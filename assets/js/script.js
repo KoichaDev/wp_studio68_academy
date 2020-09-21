@@ -6,9 +6,11 @@ import TableofContent from './table-of-content';
 import TrackingProgress from './tracking-progress';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    new TrackingProgress();
     new MatchMedia();
-    new TableofContent()
     new Timezone();
     new ChartJs();
-    new TrackingProgress();
+    new TableofContent()
+
 })
