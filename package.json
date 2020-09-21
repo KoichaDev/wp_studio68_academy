@@ -4,7 +4,9 @@
   "description": "This is a LMS Theme for Studio68",
   "main": "index.js",
   "dependencies": {
-    "moment": "^2.27.0"
+    "chart.js": "^2.9.3",
+    "moment": "^2.27.0",
+    "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {},
   "scripts": {
