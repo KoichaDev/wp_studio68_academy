@@ -1,4 +1,10 @@
 export default class HTTP {
+    // Make an HTTP GET Request
+    async get(url) {
+        const res = await fetch(url);
+        return res.json();
+    }
+
     // Make an HTTP Post Request
     async post(url, data) {
         const response = await fetch(url, {
@@ -39,5 +45,7 @@ export default class HTTP {
         })
         return await response.json();
     }
+
+
 }
 
