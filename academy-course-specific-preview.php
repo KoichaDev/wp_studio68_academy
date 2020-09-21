@@ -20,11 +20,11 @@
                                 <li> 
                                     <?php if($row['academy_course_progress_button'][0] == 'true') : ?>
                                     <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
-                                        <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" data-id="<?php the_ID(); ?>" checked>
+                                        <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" checked>
                                     </label>
                                     <?php else :?>
                                     <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
-                                        <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" data-id="<?php the_ID(); ?>">
+                                        <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
                                     </label>
                                     <?php endif; ?>
                                 </li>
@@ -50,11 +50,11 @@
                          <li data-id="<?php the_ID(); ?>"> 
                             <?php if($row['academy_course_progress_button'][0] == 'true') : ?>
                                 <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
-                                    <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" data-id="<?php the_ID(); ?>" checked>
+                                    <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" checked>
                                 </label>
                             <?php else :?>
                             <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
-                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" data-id="<?php the_ID(); ?>">
+                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" ?>">
                             </label>
                             <?php endif; ?>
                         </li>
@@ -88,11 +88,11 @@
                                     <li data-id="<?php the_ID(); ?>"> 
                                         <?php if($row['academy_course_progress_button'][0] == 'true') : ?>
                                             <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
-                                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" data-id="<?php the_ID(); ?>" checked>
+                                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" checked>
                                             </label>
                                         <?php else :?>
                                             <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
-                                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" data-id="<?php the_ID(); ?>">
+                                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
                                             </label>
                                         <?php endif; ?>
                                     </li>
