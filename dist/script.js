@@ -22261,7 +22261,183 @@ var TableOfContent = /*#__PURE__*/function () {
 }();
 
 exports.default = TableOfContent;
-},{}],"script.js":[function(require,module,exports) {
+},{}],"HTTP.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var HTTP = /*#__PURE__*/function () {
+  function HTTP() {
+    _classCallCheck(this, HTTP);
+  }
+
+  _createClass(HTTP, [{
+    key: "post",
+    // Make an HTTP Post Request
+    value: function () {
+      var _post = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url, data) {
+        var response;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return fetch(url, {
+                  method: 'POST',
+                  headers: {
+                    'Content-type': 'application/json',
+                    'X-WP-Nonce': s68_api_data.nonce
+                  },
+                  credentials: 'same-origin',
+                  body: JSON.stringify(data)
+                });
+
+              case 2:
+                response = _context.sent;
+                _context.next = 5;
+                return response.json();
+
+              case 5:
+                return _context.abrupt("return", _context.sent);
+
+              case 6:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function post(_x, _x2) {
+        return _post.apply(this, arguments);
+      }
+
+      return post;
+    }() // Make an HTTP Update Request
+
+  }, {
+    key: "update",
+    value: function () {
+      var _update = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(url, data) {
+        var response;
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return fetch(url, {
+                  method: 'PUT',
+                  headers: {
+                    'Content-type': 'application/json',
+                    'X-WP-Nonce': s68_api_data.nonce
+                  },
+                  credentials: 'same-origin',
+                  body: JSON.stringify(data)
+                });
+
+              case 2:
+                response = _context2.sent;
+                _context2.next = 5;
+                return response.json();
+
+              case 5:
+                return _context2.abrupt("return", _context2.sent);
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      function update(_x3, _x4) {
+        return _update.apply(this, arguments);
+      }
+
+      return update;
+    }() // Make an HTTP DELETE Request
+
+  }, {
+    key: "delete",
+    value: function () {
+      var _delete2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(url) {
+        var response;
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.next = 2;
+                return fetch(url, {
+                  method: 'DELETE',
+                  headers: {
+                    'Content-type': 'application/json',
+                    'X-WP-Nonce': s68_api_data.nonce
+                  },
+                  credentials: 'same-origin'
+                });
+
+              case 2:
+                response = _context3.sent;
+                _context3.next = 5;
+                return response.json();
+
+              case 5:
+                return _context3.abrupt("return", _context3.sent);
+
+              case 6:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      function _delete(_x5) {
+        return _delete2.apply(this, arguments);
+      }
+
+      return _delete;
+    }()
+  }]);
+
+  return HTTP;
+}();
+
+exports.default = HTTP;
+},{}],"tracking-progress.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _HTTP = _interopRequireDefault(require("./HTTP"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TrackingProgress = function TrackingProgress() {
+  _classCallCheck(this, TrackingProgress);
+};
+
+exports.default = TrackingProgress;
+},{"./HTTP":"HTTP.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _timezone = _interopRequireDefault(require("./timezone"));
@@ -22272,6 +22448,8 @@ var _MatchMedia = _interopRequireDefault(require("./Match-media"));
 
 var _tableOfContent = _interopRequireDefault(require("./table-of-content"));
 
+var _trackingProgress = _interopRequireDefault(require("./tracking-progress"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -22279,8 +22457,9 @@ document.addEventListener('DOMContentLoaded', function () {
   new _tableOfContent.default();
   new _timezone.default();
   new _chart.default();
+  new _trackingProgress.default();
 });
-},{"./timezone":"timezone.js","./chart":"chart.js","./Match-media":"Match-media.js","./table-of-content":"table-of-content.js"}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./timezone":"timezone.js","./chart":"chart.js","./Match-media":"Match-media.js","./table-of-content":"table-of-content.js","./tracking-progress":"tracking-progress.js"}],"../../../../../../../../Users/Khoi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
