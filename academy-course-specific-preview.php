@@ -18,9 +18,15 @@
                         <?php if($row['academy_course_section'] !== '') { ?>
                             <ul class="data-unordered-list__ul">
                                 <li> 
-                                    <label for="<?php $row['academy_course_progress_button'][0]; ?>">
-                                    <input type="checkbox" id="<?php $row['academy_course_progress_button'][0]; ?>">
+                                    <?php if($row['academy_course_progress_button'][0] == 'true') : ?>
+                                    <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                        <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" checked>
                                     </label>
+                                    <?php else :?>
+                                    <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                        <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                    </label>
+                                    <?php endif; ?>
                                 </li>
                                 <li>
                                     <div class="table-of-content-container__information" data-duration>
@@ -42,9 +48,15 @@
                     } else {
                          ?>
                          <li> 
-                            <label for="<?php $row['academy_course_progress_button'][0]; ?>">
-                            <input type="checkbox" id="<?php $row['academy_course_progress_button'][0]; ?>">
+                            <?php if($row['academy_course_progress_button'][0] == 'true') : ?>
+                                <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                    <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" checked>
+                                </label>
+                            <?php else :?>
+                            <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
                             </label>
+                            <?php endif; ?>
                         </li>
                         <li>
                             <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
@@ -74,10 +86,16 @@
                                     <?php if($row['academy_course_section'] == '') { ?>
                                 <ul class="data-unordered-list__ul">
                                     <li> 
-                                    <label for="<?php $row['academy_course_progress_button'][0]; ?>">
-                                    <input type="checkbox" id="<?php $row['academy_course_progress_button'][0]; ?>">
-                                    </label>
-                                </li>
+                                        <?php if($row['academy_course_progress_button'][0] == 'true') : ?>
+                                            <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>" checked>
+                                            </label>
+                                        <?php else :?>
+                                            <label for="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                                <input type="checkbox" id="progress-<?php echo $row['academy_course_progress_button'][0]; ?>">
+                                            </label>
+                                        <?php endif; ?>
+                                    </li>
                                     <li>
                                         <div class="table-of-content-container__information" data-duration>
                                             <p><?php echo $row['academy_course_title']; ?></p>
