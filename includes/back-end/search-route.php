@@ -23,37 +23,21 @@ function s68_course($data) {
         array_push($course_api, [
             'title' => get_the_title(),
             'permalink' => get_the_permalink(),
-            'youtube' => [ 
-                'incompelte' => [
-                    'incomplete' => getProgressCompletion(),
-                ]
+            'course' => [ 
+                'progress' => track_progress(),
             ]
         ]);
     }
 
     return $course_api;
 }
-
-function getProgressCompletion() {
-    $array_complete = [];
-    $increment = 0;
+function track_progress() {
+    $array_tracking = [];
     $rows = get_field('academy_course_content');
     if( $rows ) {
         foreach( $rows as $row ) {
-
-            array_push($array_complete, $increment++); 
+            array_push($array_tracking, $row['academy_course_progress_button']); 
         }
     }
-    return $array_url;
-}
-
-function getCourseURL() {
-    $array_url = [];
-    $rows = get_field('academy_course_content');
-    if( $rows ) {
-        foreach( $rows as $row ) {
-            array_push($array_url, $row['academy_course_url']); 
-        }
-    }
-    return $array_url;
+    return $array_tracking;
 }
