@@ -34,6 +34,9 @@
     list-style: none;
     text-decoration: none;
   }
+  [data-unordered-list] li h1 {
+    color: #ffc740;
+  }
 
   [data-unordered-list] li a {
     text-decoration: none;
@@ -93,7 +96,7 @@
   }
 
   .data-unordered-list__ul li:nth-child(2) p {
-    margin-top: 0.9rem;
+    margin-top: 1.5rem;
     color: #c6c7c9;
   }
 

@@ -23,13 +23,28 @@ function s68_course($data) {
         array_push($course_api, [
             'title' => get_the_title(),
             'permalink' => get_the_permalink(),
-            'youtube' => [
-                'url' => getCourseURL()
+            'youtube' => [ 
+                'incompelte' => [
+                    'incomplete' => getProgressCompletion(),
+                ]
             ]
         ]);
     }
 
     return $course_api;
+}
+
+function getProgressCompletion() {
+    $array_complete = [];
+    $increment = 0;
+    $rows = get_field('academy_course_content');
+    if( $rows ) {
+        foreach( $rows as $row ) {
+
+            array_push($array_complete, $increment++); 
+        }
+    }
+    return $array_url;
 }
 
 function getCourseURL() {

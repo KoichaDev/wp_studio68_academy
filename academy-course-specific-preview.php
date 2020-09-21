@@ -11,20 +11,8 @@
                     if($row['academy_course_section'] !== '') { 
                             ?>
                             <li>
-                                <ul style="margin-top: 2rem;">
-                                    <li>
-                                        <div class="circle circle--br-almond" data-set-course-section></div>
-                                    </li>
-                                    <li>
-                                        <h1><?php echo $row['academy_course_section']; ?> </h1>
-                                    </li>
-                                </ul>
+                                <h1><?php echo $row['academy_course_section']; ?> </h1>
                             </li>
-                            <li class="data-unordered-list__li-duration">
-                                <img src="<?php echo get_theme_file_uri() . './assets/img/iconmonstr-time-2.svg' ?>" alt="clock">
-                                <p data-get-duration>clock</p>
-                            </li>
-                           
                             <li>
                                 <a href="<?php echo get_the_permalink() . '?section=' . $row['academy_course_title']; ?>"> 
                         <?php if($row['academy_course_section'] !== '') { ?>
@@ -88,7 +76,6 @@
                                 </ul>   
                             </a>
                         </li>
-                           <hr>
                         <?php
                     } else {
                          ?>
@@ -128,14 +115,24 @@
     <?php 
         $rows = get_field('academy_course_content');
         if( $rows ) {
-            foreach( $rows as $row ) {
+            foreach( $rows as $row => $value ) {
                 $permalink = get_the_permalink() . '?section=' . $row['academy_course_title'];  
                 if($permalink && isset($_GET["section"]) && $_GET["section"] == $row['academy_course_title']) {
                     echo $row['academy_course_embedded'];
                 } 
+                // print_r($value['academy_course_progress_button']);
+                ?>
+                
+                    <label for="<?php $row['academy_course_progress_button'][0]; ?>">
+                    <input type="checkbox" id="<?php $row['academy_course_progress_button'][0]; ?>">
+                    </label>
+                <?php   
+                
             }
         }
+        
     ?>
+
   </div>
 </main>
 

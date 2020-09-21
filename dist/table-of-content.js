@@ -184,34 +184,13 @@ var TableOfContent = /*#__PURE__*/function () {
     this.tableOfContentDescription = document.querySelector('[data-table-of-content-head-section]');
     this.tables = document.querySelectorAll('[data-table-of-content] > ul h2');
     this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
-    this.courseLength = document.querySelectorAll('[data-duration] h3 small'); // academy-course-specific-preview.php variables
-
-    this.countSection = document.querySelectorAll('[data-set-course-section]');
-    this.courseLengthPreview = document.querySelectorAll('[data-get-duration]');
+    this.courseLength = document.querySelectorAll('[data-duration] h3 small');
     this.event();
   }
 
   _createClass(TableOfContent, [{
     key: "event",
     value: function event() {
-      var increment = 1;
-
-      var _iterator2 = _createForOfIteratorHelper(this.countSection),
-          _step2;
-
-      try {
-        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-          var div = _step2.value;
-          var p = document.createElement('p');
-          p.textContent = increment++;
-          div.appendChild(p);
-        }
-      } catch (err) {
-        _iterator2.e(err);
-      } finally {
-        _iterator2.f();
-      }
-
       var sections = this.getSections();
       var lectures = this.getLectures();
       var duration = this.getCourseDuration();

@@ -6,23 +6,10 @@ export default class TableOfContent {
         this.lectures = document.querySelectorAll('[data-table-of-content] > ul li');
         this.courseLength = document.querySelectorAll('[data-duration] h3 small');
 
-        // academy-course-specific-preview.php variables
-        this.countSection = document.querySelectorAll('[data-set-course-section]');
-        this.courseLengthPreview = document.querySelectorAll('[data-get-duration]');
         this.event();
     }
 
     event() {
-
-        let increment = 1;
-        for (const div of this.countSection) {
-            const p = document.createElement('p');
-
-            p.textContent = increment++;
-
-            div.appendChild(p)
-        }
-
         const sections = this.getSections();
         const lectures = this.getLectures();
         const duration = this.getCourseDuration();
