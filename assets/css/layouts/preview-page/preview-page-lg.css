@@ -84,10 +84,19 @@
 
   .data-unordered-list__ul {
     justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  .data-unordered-list__ul li:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .data-unordered-list__ul li:nth-child(3) {
+    color: #c6c7c9;
   }
 
   .table-of-content-container__information {
-    margin-top: 1rem;
+    margin-top: 5px;
     margin-left: 2rem;
   }
 
@@ -96,7 +105,6 @@
   }
 
   .data-unordered-list__ul li:nth-child(2) p {
-    margin-top: 1.5rem;
     color: #c6c7c9;
   }
 
