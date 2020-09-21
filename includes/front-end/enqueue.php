@@ -12,5 +12,10 @@
         // This will load our scripts to work
         wp_enqueue_style('s68_css_style');
         wp_enqueue_script('s68_script_js');
+
+        wp_localize_script( 's68_script_js', 's68_api_data', array(
+            'root' => esc_url_raw( rest_url() ),
+            'nonce' => wp_create_nonce( 'wp_rest' )
+        ) );
     }
 ?>
