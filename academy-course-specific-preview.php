@@ -121,7 +121,7 @@
                 }
                 echo '</ul>';
                 ?>
-            </div>;<!-- End Div grid -->
+            </div><!-- End Div grid -->
             <?php
             }
         ?>  
