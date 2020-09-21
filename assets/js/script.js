@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime.js";
 import Timezone from './timezone';
 import ChartJs from './chart';
 import MatchMedia from './Match-media';
