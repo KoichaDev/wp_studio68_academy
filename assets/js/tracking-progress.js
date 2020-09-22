@@ -4,7 +4,7 @@ const http = new HTTP();
 export default class TrackingProgress {
     constructor() {
         this.progressFalse = document.querySelectorAll('#progress-false');
-        this.progressTrue = document.querySelectorAll('#progress-true');
+        // this.progressTrue = document.querySelectorAll('#progress-true');
         this.event();
     }
 
@@ -13,25 +13,28 @@ export default class TrackingProgress {
             this.progressFalse[i].addEventListener('click', e => this.checkBoxFalse(e, i));
         }
 
-        for (let i = 0; i < this.progressTrue.length; i++) {
-            this.progressTrue[i].addEventListener('click', e => this.checkBoxTrue(e, i));
-        }
+        // for (let i = 0; i < this.progressTrue.length; i++) {
+        //     this.progressTrue[i].addEventListener('click', e => this.checkBoxTrue(e, i));
+        // }
     }
 
     checkBoxFalse = (e, i) => {
         const setChecked = e.target.checked.toString();
-        console.log(i);
-        // console.log(setChecked);
-        // http.get('http://localhost/wordpress/wp-json/s68/v1/course?q=jira')
-        //     .then(res => {
-        //         const { tracking } = res[0];
-        //         const progress = tracking.flat();
 
-        //     })
-        //     .catch(err => console.log(err))
+        const updateProgress = {
+            progress: setChecked
+        }
+
+        http.update('http://localhost/wordpress/wp-json/s68/v1/course/272', updateProgress)
+            .then(res => {
+                const { progress } = res[0];
+                progress[0] == 'true'
+
+            })
+            .catch(err => console.log(err))
     }
 
-    checkBoxTrue = (e, i) => {
-        console.log(i);
-    }
+    // checkBoxTrue = (e, i) => {
+    //     console.log(i);
+    // }
 }

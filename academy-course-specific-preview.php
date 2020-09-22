@@ -5,8 +5,9 @@
   <div class="preview-grid__courses">
      <?php 
             $rows = get_field('academy_course_content');
-            if( $rows ) {
-                echo '<ul data-unordered-list>';
+            if( $rows ) {?>
+                <ul data-unordered-list='<?php echo get_the_ID(); ?>'>;
+                <?php 
                 foreach( $rows as $row ) {
                     if($row['academy_course_section'] !== '') { 
                             ?>

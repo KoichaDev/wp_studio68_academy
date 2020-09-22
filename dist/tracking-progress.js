@@ -333,21 +333,19 @@ var TrackingProgress = /*#__PURE__*/function () {
 
     _defineProperty(this, "checkBoxFalse", function (e, i) {
       var setChecked = e.target.checked.toString();
-      console.log(i); // console.log(setChecked);
-      // http.get('http://localhost/wordpress/wp-json/s68/v1/course?q=jira')
-      //     .then(res => {
-      //         const { tracking } = res[0];
-      //         const progress = tracking.flat();
-      //     })
-      //     .catch(err => console.log(err))
+      var updateProgress = {
+        progress: setChecked
+      };
+      http.update('http://localhost/wordpress/wp-json/s68/v1/course/272', updateProgress).then(function (res) {
+        var progress = res[0].progress;
+        progress[0] == 'true';
+      }).catch(function (err) {
+        return console.log(err);
+      });
     });
 
-    _defineProperty(this, "checkBoxTrue", function (e, i) {
-      console.log(i);
-    });
+    this.progressFalse = document.querySelectorAll('#progress-false'); // this.progressTrue = document.querySelectorAll('#progress-true');
 
-    this.progressFalse = document.querySelectorAll('#progress-false');
-    this.progressTrue = document.querySelectorAll('#progress-true');
     this.event();
   }
 
@@ -364,18 +362,14 @@ var TrackingProgress = /*#__PURE__*/function () {
 
       for (var i = 0; i < this.progressFalse.length; i++) {
         _loop(i);
-      }
+      } // for (let i = 0; i < this.progressTrue.length; i++) {
+      //     this.progressTrue[i].addEventListener('click', e => this.checkBoxTrue(e, i));
+      // }
 
-      var _loop2 = function _loop2(_i) {
-        _this.progressTrue[_i].addEventListener('click', function (e) {
-          return _this.checkBoxTrue(e, _i);
-        });
-      };
+    } // checkBoxTrue = (e, i) => {
+    //     console.log(i);
+    // }
 
-      for (var _i = 0; _i < this.progressTrue.length; _i++) {
-        _loop2(_i);
-      }
-    }
   }]);
 
   return TrackingProgress;
@@ -410,7 +404,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58784" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51799" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
