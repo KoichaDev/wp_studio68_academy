@@ -25,9 +25,7 @@ function s68_course($data) {
             'id' => get_the_ID(),
             'title' => get_the_title(),
             'permalink' => get_the_permalink(),
-            'course' => [ 
-                'progress' => track_progress(),
-            ]
+            'progress' => track_progress(),
         ]);
     }
 
