@@ -1,0 +1,299 @@
+[
+    {
+        "key": "group_5f57b7c432346",
+        "title": "Studio68 Courses",
+        "fields": [
+            {
+                "key": "field_5f57b7cc357ff",
+                "label": "Academy Course(s)",
+                "name": "academy_courses",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5f5fa5eef9de1",
+                "label": "Academy Course Video Preview",
+                "name": "academy_course_video_preview",
+                "type": "oembed",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "width": 540,
+                "height": 321
+            },
+            {
+                "key": "field_5f5fadc8ba2b0",
+                "label": "Academy Course Description",
+                "name": "academy_course_description",
+                "type": "text",
+                "instructions": "Add the description of the course is about",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Enter the description about this course",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5f5fb87888b5b",
+                "label": "Academy Course Objective Learning",
+                "name": "academy_course_objective_learning",
+                "type": "wysiwyg",
+                "instructions": "Write down what the course is all about",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_5f5fc99868bc5",
+                "label": "Academy Course Skills Tag",
+                "name": "academy_course_skills_tag",
+                "type": "taxonomy",
+                "instructions": "Add what the user of the skill will learn in this course",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "post_tag",
+                "field_type": "checkbox",
+                "add_term": 0,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "object",
+                "multiple": 0,
+                "allow_null": 0
+            },
+            {
+                "key": "field_5f63626aba714",
+                "label": "Academy Course Content",
+                "name": "academy_course_content",
+                "type": "repeater",
+                "instructions": "Add Course field",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5f638402f5b27",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5f63934dfb996",
+                        "label": "Academy course section",
+                        "name": "academy_course_section",
+                        "type": "text",
+                        "instructions": "Add the section name",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Add a section title...",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5f638402f5b27",
+                        "label": "Academy Course Image",
+                        "name": "academy_course_image",
+                        "type": "image",
+                        "instructions": "Add the course Image",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5f63a057f9cc1",
+                        "label": "Academy Course Title",
+                        "name": "academy_course_title",
+                        "type": "text",
+                        "instructions": "Enter the title of the video course",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Enter a title...",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5f6391459115a",
+                        "label": "Academy Course Duration",
+                        "name": "academy_course_duration",
+                        "type": "number",
+                        "instructions": "Duration will be displayed in minute(s)",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Enter a minute number...",
+                        "prepend": "",
+                        "append": "",
+                        "min": "",
+                        "max": "",
+                        "step": ""
+                    },
+                    {
+                        "key": "field_5f6391899115b",
+                        "label": "Academy Course Lecture Description",
+                        "name": "academy_course_lecture_description",
+                        "type": "textarea",
+                        "instructions": "This is to let the end-user to know what the course is about",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Enter description of the course....",
+                        "maxlength": "",
+                        "rows": 5,
+                        "new_lines": ""
+                    },
+                    {
+                        "key": "field_5f639576f7908",
+                        "label": "Academy Course url",
+                        "name": "academy_course_url",
+                        "type": "url",
+                        "instructions": "Add the course URL",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Enter a url...."
+                    },
+                    {
+                        "key": "field_5f63f65e35858",
+                        "label": "Academy Course embedded",
+                        "name": "academy_course_embedded",
+                        "type": "oembed",
+                        "instructions": "Add the course url...",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "width": "",
+                        "height": ""
+                    },
+                    {
+                        "key": "field_5f658cbc9b087",
+                        "label": "Academy Course progress button",
+                        "name": "academy_course_progress_button",
+                        "type": "checkbox",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "false": "false",
+                            "true": "true"
+                        },
+                        "allow_custom": 0,
+                        "default_value": [],
+                        "layout": "vertical",
+                        "toggle": 0,
+                        "return_format": "value",
+                        "save_custom": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "courses"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
