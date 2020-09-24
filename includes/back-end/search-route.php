@@ -4,14 +4,19 @@ add_action('rest_api_init', 's68_course_api');
 
 function s68_course_api() {
     register_rest_route('s68/v1', 'course/(?P<id>\d+)', [
-        'methods' => WP_REST_SERVER::ALLMETHODS ,
-        'callback' => 's68_course'
+      [
+        'methods' => WP_REST_Server::READABLE,
+        'callback' => 's68_get_course'
+      ],
+      [
+        'methods' => WP_REST_Server::EDITABLE,
+        'callback' => 's68_update_course'
+      ]
     ]);
 }
 
-function s68_course($data) {
 
-  
+function s68_get_course($data) {  
     $course = new WP_Query([
         'post_type' => 'courses',
         'p' => sanitize_text_field($data['id'])
@@ -31,6 +36,23 @@ function s68_course($data) {
 
     return $course_api;
 }
+
+function s68_update_course($data) {
+    $post_id = sanitize_text_field( $data['id' ] );
+    if( $data['course_content'] ) {
+        print_r($data['course_content']);
+        $row_index = $data['course_content']['row_index'];
+        $sub_field = $data['course_content']['sub_field'];
+        $new_value = $data['course_content']['value'];
+
+        update_sub_field(
+          [ 'academy_course_content', $row_index, $sub_field ],
+          $new_value,
+          $post_id
+        );
+    }
+}
+
 function track_progress() {
     $array_tracking = [];
     $rows = get_field('academy_course_content');
