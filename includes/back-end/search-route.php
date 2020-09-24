@@ -38,19 +38,47 @@ function s68_get_course($data) {
 }
 
 function s68_update_course($data) {
+      $subfield_whitelist = ['academy_course_progress_button'];
     $post_id = sanitize_text_field( $data['id' ] );
+
     if( $data['course_content'] ) {
-        print_r($data['course_content']);
-        $row_index = $data['course_content']['row_index'];
-        $sub_field = $data['course_content']['sub_field'];
+        $row_index = intval( $data['course_content']['row_index'] );
+        $sub_field = sanitize_text_field( $data['course_content']['sub_field'] );
         $new_value = $data['course_content']['value'];
 
-        update_sub_field(
+        // If intval() returned 0, then $data['course_content']['row_index'] was not a number.
+        // It's alright to check this way because ACF row indexes start at 1 instead of 0 - so 0 is
+        // never a valid row number.
+        if( $row_index === 0 ) {
+            return [
+                'success' => false,
+                'message' => 'Invalid row number'
+            ];
+        }
+
+        // Don't let malicious users change subfields they're not allowed to
+        if( !in_array( $sub_field, $subfield_whitelist ) ) {
+            return [
+                'success' => false,
+                'message' => 'Invalid sub field'
+            ];
+        }
+
+        $success = update_sub_field(
           [ 'academy_course_content', $row_index, $sub_field ],
           $new_value,
           $post_id
         );
+
+        return [
+            'success' => $success
+        ];
     }
+
+    return [
+        'success' => false,
+        'message' => 'Unknown update request'
+    ];
 }
 
 function track_progress() {
