@@ -9,23 +9,23 @@ export default class TrackingProgress {
     }
 
     event() {
+        console.log(this.progressFalse);
         for (let i = 0; i < this.progressFalse.length; i++) {
-            this.progressFalse[i].addEventListener('click', e => this.checkBoxFalse(e, i));
+            this.progressFalse[i].addEventListener('change', e => this.checkBoxFalse(e, i));
         }
 
         for (let i = 0; i < this.progressTrue.length; i++) {
-            this.progressTrue[i].addEventListener('click', e => this.checkBoxTrue(e, i));
+            this.progressTrue[i].addEventListener('change', e => this.checkBoxTrue(e, i));
         }
     }
 
     checkBoxFalse = (e, i) => {
         const setChecked = e.target.checked.toString();
-
-        console.log(setChecked);
+        const rowIndex = parseInt(e.target.dataset.setProgress);
 
         const updateProgress = {
             "course_content": {
-                "row_index": 1,
+                "row_index": rowIndex + 1, // Reason is the ACF doesn't have row starting 0, so we increment it with 1 instead
                 "sub_field": "academy_course_progress_button",
                 "value": setChecked
             }
@@ -38,11 +38,12 @@ export default class TrackingProgress {
 
     checkBoxTrue = (e, i) => {
         const setChecked = e.target.checked.toString();
-        console.log(setChecked);
+        const rowIndex = parseInt(e.target.dataset.setProgress);
+
         const updateProgress = {
 
             "course_content": {
-                "row_index": 1,
+                "row_index": rowIndex + 1,
                 "sub_field": "academy_course_progress_button",
                 "value": setChecked
             }

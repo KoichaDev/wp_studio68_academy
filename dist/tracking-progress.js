@@ -333,10 +333,11 @@ var TrackingProgress = /*#__PURE__*/function () {
 
     _defineProperty(this, "checkBoxFalse", function (e, i) {
       var setChecked = e.target.checked.toString();
-      console.log(setChecked);
+      var rowIndex = parseInt(e.target.dataset.setProgress);
       var updateProgress = {
         "course_content": {
-          "row_index": 1,
+          "row_index": rowIndex + 1,
+          // Reason is the ACF doesn't have row starting 0, so we increment it with 1 instead
           "sub_field": "academy_course_progress_button",
           "value": setChecked
         }
@@ -348,10 +349,10 @@ var TrackingProgress = /*#__PURE__*/function () {
 
     _defineProperty(this, "checkBoxTrue", function (e, i) {
       var setChecked = e.target.checked.toString();
-      console.log(setChecked);
+      var rowIndex = parseInt(e.target.dataset.setProgress);
       var updateProgress = {
         "course_content": {
-          "row_index": 1,
+          "row_index": rowIndex + 1,
           "sub_field": "academy_course_progress_button",
           "value": setChecked
         }
@@ -371,8 +372,10 @@ var TrackingProgress = /*#__PURE__*/function () {
     value: function event() {
       var _this = this;
 
+      console.log(this.progressFalse);
+
       var _loop = function _loop(i) {
-        _this.progressFalse[i].addEventListener('click', function (e) {
+        _this.progressFalse[i].addEventListener('change', function (e) {
           return _this.checkBoxFalse(e, i);
         });
       };
@@ -382,7 +385,7 @@ var TrackingProgress = /*#__PURE__*/function () {
       }
 
       var _loop2 = function _loop2(_i) {
-        _this.progressTrue[_i].addEventListener('click', function (e) {
+        _this.progressTrue[_i].addEventListener('change', function (e) {
           return _this.checkBoxTrue(e, _i);
         });
       };
